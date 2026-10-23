@@ -197,7 +197,7 @@
       <h1>Samuel Olabode</h1>
       <p class="oneliner">High school student and full-stack/backend developer building software products and contributing to open-source projects.</p>
       <a class="btn" href="https://github.com/DevOlabode">Explore my projects on GitHub →</a>
-      <span class="btn-note">Or connect with me on LinkedIn: <mark>[Add your LinkedIn URL]</mark></span>
+      <span class="btn-note">Or connect with me on LinkedIn: https://www.linkedin.com/in/samuelolabode/</span>
 
       <p class="now"><strong>Now:</strong>Getting Voult ready for its private beta in December, and moving Vizably's documentation into Codrlabs' open repo.</p>
     </div>
@@ -218,7 +218,7 @@
             <dt>Problem</dt>
             <dd>Developers picking an auth provider usually trade ease of use against cost. Voult aims for Clerk-level ease of use at Supabase-level affordability.</dd>
             <dt>Decision</dt>
-            <dd>Built it as a paid SaaS with a free tier rather than an open-source library, and split the SDK into focused npm packages: <code>@voult/sdk</code>, <code>@voult/express</code> and <code>@voult/cli</code>. <mark>[Why these choices? One sentence.]</mark></dd>
+            <dd>Built it as a paid SaaS with a free tier rather than an open-source library, and split the SDK into focused npm packages: <code>@voult/sdk</code>, <code>@voult/express</code> and <code>@voult/cli</code>.</dd>
             <dt>Built</dt>
             <dd>
               Authentication flows, JWT access/refresh tokens, email verification, OAuth, MFA, app credentials, the SDK, API design, and developer-facing documentation.
@@ -235,31 +235,34 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-head">
-            <h3>Vizably</h3>
-            <span class="meta">2026 · Codrlabs Solutions · Open source</span>
-          </div>
-          <p class="sub">Open-source accessibility scanning platform. I've contributed as a volunteer engineer at Codrlabs Solutions since early 2026.</p>
-          <dl>
-            <dt>Problem</dt>
-            <dd><mark>[Who uses Vizably, and what accessibility problem does it solve for them?]</mark></dd>
-            <dt>My part</dt>
-            <dd>
-              Backend architecture, automated accessibility scanning with Puppeteer and axe-core, SSRF protection for the scanner, report storage, GitHub and Google integrations, authentication, and testing.
-              <ul class="tags">
-                <li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
-              </ul>
-            </dd>
-            <dt>Decision</dt>
-            <dd><mark>[One decision you made in the backend or scanner design, and why]</mark></dd>
-            <dt>Result</dt>
-            <dd><mark>[What did your work change? e.g. features shipped, PRs merged]</mark></dd>
-          </dl>
-          <div class="links">
-            <a href="https://github.com/codrlabs/vizably">github.com/codrlabs/vizably →</a>
-          </div>
-        </article>
+      <article class="card">
+  <div class="card-head">
+    <h3>Vizably</h3>
+    <span class="meta">2026 · Codrlabs Solutions · Open source</span>
+  </div>
+  <p class="sub">Open-source accessibility scanning platform. I've contributed as a volunteer engineer at Codrlabs Solutions since early 2026.</p>
+  <dl>
+    <dt>Problem</dt>
+    <dd>Developers need a reliable way to identify accessibility issues in websites without relying entirely on manual testing. Vizably automates accessibility scanning and surfaces issues that can be investigated and fixed.</dd>
+
+    <dt>My part</dt>
+    <dd>
+      Backend architecture, automated accessibility scanning with Puppeteer and axe-core, SSRF protection for the scanner, report storage, GitHub and Google integrations, authentication, and testing.
+      <ul class="tags">
+        <li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
+      </ul>
+    </dd>
+
+    <dt>Decision</dt>
+    <dd>I designed the scanning flow with security boundaries around user-provided URLs, including SSRF protection, so the scanner could fetch external websites without exposing internal services or infrastructure.</dd>
+
+    <dt>Result</dt>
+    <dd>My contributions helped ship the backend scanning infrastructure, security protections, integrations, authentication, and automated tests, with the work reviewed and integrated through Vizably's open-source pull-request workflow.</dd>
+  </dl>
+  <div class="links">
+    <a href="https://github.com/codrlabs/vizably">github.com/codrlabs/vizably →</a>
+  </div>
+</article>
 
         <article class="card">
           <div class="card-head">
@@ -271,7 +274,7 @@
             <dt>Problem</dt>
             <dd>Developers find useful resources constantly and lose track of them across tabs and bookmarks.</dd>
             <dt>Decision</dt>
-            <dd>Open-sourced it a month after launch. <mark>[Why did you open-source it?]</mark></dd>
+            <dd>Open-sourced it a month after launch.</dd>
             <dt>Result</dt>
             <dd>Launched August 2026 on the Chrome Web Store and Edge Add-ons. Made open source in September 2026 and received around four outside contributions in the first week. <mark>[Install count, if you have it]</mark></dd>
           </dl>
@@ -311,7 +314,7 @@
         <h2>Contact</h2>
         <ul class="contact">
           <li><span class="k">email</span><a href="mailto:solabode223@gmail.com">solabode223@gmail.com</a></li>
-          <li><span class="k">linkedin</span><mark>https://www.linkedin.com/in/samuelolabode/</mark></li>
+          <li><span class="k">linkedin</span>https://www.linkedin.com/in/samuelolabode/</li>
           <li><span class="k">github</span><a href="https://github.com/DevOlabode" rel="me">github.com/DevOlabode</a></li>
         </ul>
       </div>
