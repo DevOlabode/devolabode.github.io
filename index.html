@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samuel Olabode · Full-stack &amp; backend developer</title>
+  <meta name="description" content="High school student and full-stack/backend developer building software products and contributing to open-source projects.">
+  <meta name="author" content="Samuel Olabode">
+  <link rel="canonical" href="https://devolabode.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Samuel Olabode · Full-stack &amp; backend developer">
+  <meta property="og:description" content="High school student and full-stack/backend developer building software products and contributing to open-source projects.">
+  <meta property="og:url" content="https://devolabode.github.io/">
+  <meta property="og:site_name" content="Samuel Olabode">
+  <meta property="profile:first_name" content="Samuel">
+  <meta property="profile:last_name" content="Olabode">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Samuel Olabode · Full-stack &amp; backend developer">
+  <meta name="twitter:description" content="High school student and full-stack/backend developer building software products and contributing to open-source projects.">
+
+  <!-- Identity links (add LinkedIn here once you have the URL:
+       <link rel="me" href="YOUR_LINKEDIN_URL"> ) -->
+  <link rel="me" href="https://github.com/DevOlabode">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #18181b;
+      --muted: #5b5b66;
+      --border: #e4e4e7;
+      --accent: #0e7490;
+      --accent-soft: #e0f2f7;
+      --mark-bg: #ffe600;
+      --mark-text: #111111;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --surface: #141a22;
+        --text: #e6e8eb;
+        --muted: #9aa3ae;
+        --border: #242c37;
+        --accent: #38bdf8;
+        --accent-soft: #10273a;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    mark {
+      background: var(--mark-bg);
+      color: var(--mark-text);
+      padding: 0 .25em;
+      border-radius: 2px;
+    }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero */
+    header.hero { padding: 88px 0 56px; border-bottom: 1px solid var(--border); }
+    .prompt {
+      font-family: var(--mono);
+      font-size: .85rem;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+    .prompt span { color: var(--accent); }
+    h1 {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: clamp(2.1rem, 7vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+    .oneliner { font-size: 1.2rem; color: var(--muted); margin: 0 0 32px; max-width: 36em; }
+    .btn {
+      display: inline-block;
+      font-family: var(--mono);
+      font-weight: 500;
+      font-size: .95rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+    }
+    @media (prefers-color-scheme: dark) { .btn { color: #0d1117; } }
+    .btn:hover { filter: brightness(1.08); }
+    .btn-note { display: block; margin-top: 12px; font-size: .9rem; color: var(--muted); }
+
+    .now {
+      margin-top: 40px;
+      font-family: var(--mono);
+      font-size: .9rem;
+      padding: 12px 14px;
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 0 6px 6px 0;
+    }
+    .now strong { color: var(--accent); font-weight: 600; margin-right: .5em; }
+
+    /* Sections */
+    section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+    h2 {
+      font-family: var(--mono);
+      font-size: .85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--accent);
+      margin: 0 0 28px;
+    }
+    h2::before { content: "## "; color: var(--muted); }
+
+    /* Featured */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 4px; }
+    .card h3 { font-family: var(--mono); font-size: 1.25rem; margin: 0; }
+    .meta { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+    .card .sub { color: var(--muted); margin: 0 0 18px; font-size: .97rem; }
+    dl { margin: 0; display: grid; grid-template-columns: 96px 1fr; gap: 10px 16px; }
+    dt {
+      font-family: var(--mono);
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      padding-top: 3px;
+    }
+    dd { margin: 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; padding: 0; list-style: none; }
+    .tags li {
+      font-family: var(--mono);
+      font-size: .75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      color: var(--muted);
+    }
+    .card .link { display: inline-block; margin-top: 18px; font-family: var(--mono); font-size: .9rem; }
+    @media (max-width: 520px) {
+      dl { grid-template-columns: 1fr; gap: 2px; }
+      dd { margin-bottom: 10px; }
+      .card { padding: 18px; }
+    }
+
+    /* Work list */
+    .work { list-style: none; margin: 0; padding: 0; }
+    .work li {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px dashed var(--border);
+    }
+    .work li:first-child { border-top: none; }
+    .work time { font-family: var(--mono); font-size: .85rem; color: var(--muted); padding-top: 2px; }
+    @media (max-width: 520px) { .work li { grid-template-columns: 1fr; gap: 2px; } }
+
+    /* About + contact */
+    .about p { margin: 0; max-width: 38em; }
+    .contact { list-style: none; padding: 0; margin: 0; font-family: var(--mono); font-size: .95rem; }
+    .contact li { padding: 6px 0; }
+    .contact .k { display: inline-block; width: 90px; color: var(--muted); }
+
+    footer { padding: 32px 0 48px; font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="prompt"><span>$</span> whoami</p>
+      <h1>Samuel Olabode</h1>
+      <p class="oneliner">High school student and full-stack/backend developer building software products and contributing to open-source projects.</p>
+      <a class="btn" href="https://github.com/DevOlabode">Explore my projects on GitHub →</a>
+      <span class="btn-note">Or connect with me on LinkedIn: <mark>[Add your LinkedIn URL]</mark></span>
+
+      <p class="now"><strong>Now:</strong><mark>[What are you working on this month?]</mark></p>
+    </div>
+  </header>
+
+  <main>
+    <section id="featured">
+      <div class="wrap">
+        <h2>Featured</h2>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Voult.dev</h3>
+            <span class="meta">2026 · Developer authentication SaaS</span>
+          </div>
+          <p class="sub">Authentication platform for developers, built from scratch.</p>
+          <dl>
+            <dt>Problem</dt>
+            <dd><mark>[What problem does Voult solve for developers, and who has it?]</mark></dd>
+            <dt>Decision</dt>
+            <dd><mark>[What key technical decision did you make here, and why?]</mark></dd>
+            <dt>Built</dt>
+            <dd>
+              Authentication flows, JWT access/refresh tokens, email verification, OAuth, MFA, app credentials, an SDK, API design, and developer-facing documentation.
+              <ul class="tags">
+                <li>JWT</li><li>OAuth</li><li>MFA</li><li>SDK</li><li>REST API</li>
+              </ul>
+            </dd>
+            <dt>Result</dt>
+            <dd><mark>[What's the current status? Launched, in beta, number of users or apps?]</mark></dd>
+          </dl>
+          <a class="link" href="https://github.com/voult-dev/voult">github.com/voult-dev/voult →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Vizably</h3>
+            <span class="meta">2026 · Codrlabs Solutions · Open source</span>
+          </div>
+          <p class="sub">Open-source accessibility platform.</p>
+          <dl>
+            <dt>Problem</dt>
+            <dd><mark>[What accessibility problem does Vizably solve, and for whom?]</mark></dd>
+            <dt>My part</dt>
+            <dd>
+              Backend architecture, accessibility scanning with Puppeteer and axe-core, GitHub and Google integrations, authentication, and testing.
+              <ul class="tags">
+                <li>Puppeteer</li><li>axe-core</li><li>GitHub API</li><li>Google API</li><li>Testing</li>
+              </ul>
+            </dd>
+            <dt>Decision</dt>
+            <dd><mark>[What did you decide in the backend or scanning design, and why?]</mark></dd>
+            <dt>Result</dt>
+            <dd><mark>[What did your work change? Shipped features, merged PRs, sites scanned?]</mark></dd>
+          </dl>
+          <a class="link" href="https://github.com/codrlabs/vizably">github.com/codrlabs/vizably →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Curate</h3>
+            <span class="meta">2026 · Browser extension · Open source</span>
+          </div>
+          <p class="sub">Browser extension for discovering and saving developer resources.</p>
+          <dl>
+            <dt>Problem</dt>
+            <dd>Developers find useful resources constantly and lose track of them. <mark>[Is this the problem you were solving? Adjust if not.]</mark></dd>
+            <dt>Decision</dt>
+            <dd><mark>[What did you decide in building it, and why?]</mark></dd>
+            <dt>Result</dt>
+            <dd>Published for Chrome and Edge. <mark>[Number of users or installs, if you have it]</mark></dd>
+          </dl>
+          <a class="link" href="https://github.com/DevOlabode/curate">github.com/DevOlabode/curate →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <h2>Work</h2>
+        <ul class="work">
+          <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
+          <li>
+            <time><mark>[Date]</mark></time>
+            <span><mark>[Your next project: what it was, plus its link]</mark></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <p>I like closing the gap between an idea and a working product, especially developer tools and web applications that are easier to build, use, and maintain. I'm still in high school, but I build and ship software outside of school instead of only following tutorials or making demo projects. My work covers real users, APIs, authentication, deployment, open-source collaboration, and developer experience.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <ul class="contact">
+          <li><span class="k">email</span><a href="mailto:solabode223@gmail.com">solabode223@gmail.com</a></li>
+          <li><span class="k">linkedin</span><mark>https://www.linkedin.com/in/samuelolabode/</mark></li>
+          <li><span class="k">github</span><a href="https://github.com/DevOlabode" rel="me">github.com/DevOlabode</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Samuel Olabode · Edmonton, Alberta</div>
+  </footer>
+
+</body>
+</html>
