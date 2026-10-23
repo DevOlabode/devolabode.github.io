@@ -79,12 +79,7 @@
 
     /* Hero */
     header.hero { padding: 88px 0 56px; border-bottom: 1px solid var(--border); }
-    .prompt {
-      font-family: var(--mono);
-      font-size: .85rem;
-      color: var(--muted);
-      margin: 0 0 18px;
-    }
+    .prompt { font-family: var(--mono); font-size: .85rem; color: var(--muted); margin: 0 0 18px; }
     .prompt span { color: var(--accent); }
     h1 {
       font-family: var(--mono);
@@ -165,7 +160,7 @@
       padding: 2px 7px;
       color: var(--muted);
     }
-    .card .link { display: inline-block; margin-top: 18px; font-family: var(--mono); font-size: .9rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-family: var(--mono); font-size: .9rem; }
     @media (max-width: 520px) {
       dl { grid-template-columns: 1fr; gap: 2px; }
       dd { margin-bottom: 10px; }
@@ -204,7 +199,7 @@
       <a class="btn" href="https://github.com/DevOlabode">Explore my projects on GitHub →</a>
       <span class="btn-note">Or connect with me on LinkedIn: <mark>[Add your LinkedIn URL]</mark></span>
 
-      <p class="now"><strong>Now:</strong><mark>[What are you working on this month?]</mark></p>
+      <p class="now"><strong>Now:</strong>Getting Voult ready for its private beta in December, and moving Vizably's documentation into Codrlabs' open repo.</p>
     </div>
   </header>
 
@@ -216,25 +211,28 @@
         <article class="card">
           <div class="card-head">
             <h3>Voult.dev</h3>
-            <span class="meta">2026 · Developer authentication SaaS</span>
+            <span class="meta">2025–present · Developer authentication SaaS</span>
           </div>
-          <p class="sub">Authentication platform for developers, built from scratch.</p>
+          <p class="sub">Authentication platform for developers, built from scratch over about a year.</p>
           <dl>
             <dt>Problem</dt>
-            <dd><mark>[What problem does Voult solve for developers, and who has it?]</mark></dd>
+            <dd>Developers picking an auth provider usually trade ease of use against cost. Voult aims for Clerk-level ease of use at Supabase-level affordability.</dd>
             <dt>Decision</dt>
-            <dd><mark>[What key technical decision did you make here, and why?]</mark></dd>
+            <dd>Built it as a paid SaaS with a free tier rather than an open-source library, and split the SDK into focused npm packages: <code>@voult/sdk</code>, <code>@voult/express</code> and <code>@voult/cli</code>. <mark>[Why these choices? One sentence.]</mark></dd>
             <dt>Built</dt>
             <dd>
-              Authentication flows, JWT access/refresh tokens, email verification, OAuth, MFA, app credentials, an SDK, API design, and developer-facing documentation.
+              Authentication flows, JWT access/refresh tokens, email verification, OAuth, MFA, app credentials, the SDK, API design, and developer-facing documentation.
               <ul class="tags">
                 <li>JWT</li><li>OAuth</li><li>MFA</li><li>SDK</li><li>REST API</li>
               </ul>
             </dd>
             <dt>Result</dt>
-            <dd><mark>[What's the current status? Launched, in beta, number of users or apps?]</mark></dd>
+            <dd>Live at voult.dev. First roadmap phase completed September 2026. Private beta planned for December 2026, public launch early 2027.</dd>
           </dl>
-          <a class="link" href="https://github.com/voult-dev/voult">github.com/voult-dev/voult →</a>
+          <div class="links">
+            <a href="https://voult.dev">voult.dev →</a>
+            <a href="https://github.com/voult-dev/voult">github.com/voult-dev/voult →</a>
+          </div>
         </article>
 
         <article class="card">
@@ -242,23 +240,25 @@
             <h3>Vizably</h3>
             <span class="meta">2026 · Codrlabs Solutions · Open source</span>
           </div>
-          <p class="sub">Open-source accessibility platform.</p>
+          <p class="sub">Open-source accessibility scanning platform. I've contributed as a volunteer engineer at Codrlabs Solutions since early 2026.</p>
           <dl>
             <dt>Problem</dt>
-            <dd><mark>[What accessibility problem does Vizably solve, and for whom?]</mark></dd>
+            <dd><mark>[Who uses Vizably, and what accessibility problem does it solve for them?]</mark></dd>
             <dt>My part</dt>
             <dd>
-              Backend architecture, accessibility scanning with Puppeteer and axe-core, GitHub and Google integrations, authentication, and testing.
+              Backend architecture, automated accessibility scanning with Puppeteer and axe-core, SSRF protection for the scanner, report storage, GitHub and Google integrations, authentication, and testing.
               <ul class="tags">
-                <li>Puppeteer</li><li>axe-core</li><li>GitHub API</li><li>Google API</li><li>Testing</li>
+                <li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
               </ul>
             </dd>
             <dt>Decision</dt>
-            <dd><mark>[What did you decide in the backend or scanning design, and why?]</mark></dd>
+            <dd><mark>[One decision you made in the backend or scanner design, and why]</mark></dd>
             <dt>Result</dt>
-            <dd><mark>[What did your work change? Shipped features, merged PRs, sites scanned?]</mark></dd>
+            <dd><mark>[What did your work change? e.g. features shipped, PRs merged]</mark></dd>
           </dl>
-          <a class="link" href="https://github.com/codrlabs/vizably">github.com/codrlabs/vizably →</a>
+          <div class="links">
+            <a href="https://github.com/codrlabs/vizably">github.com/codrlabs/vizably →</a>
+          </div>
         </article>
 
         <article class="card">
@@ -266,16 +266,18 @@
             <h3>Curate</h3>
             <span class="meta">2026 · Browser extension · Open source</span>
           </div>
-          <p class="sub">Browser extension for discovering and saving developer resources.</p>
+          <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles.</p>
           <dl>
             <dt>Problem</dt>
-            <dd>Developers find useful resources constantly and lose track of them. <mark>[Is this the problem you were solving? Adjust if not.]</mark></dd>
+            <dd>Developers find useful resources constantly and lose track of them across tabs and bookmarks.</dd>
             <dt>Decision</dt>
-            <dd><mark>[What did you decide in building it, and why?]</mark></dd>
+            <dd>Open-sourced it a month after launch. <mark>[Why did you open-source it?]</mark></dd>
             <dt>Result</dt>
-            <dd>Published for Chrome and Edge. <mark>[Number of users or installs, if you have it]</mark></dd>
+            <dd>Launched August 2026 on the Chrome Web Store and Edge Add-ons. Made open source in September 2026 and received around four outside contributions in the first week. <mark>[Install count, if you have it]</mark></dd>
           </dl>
-          <a class="link" href="https://github.com/DevOlabode/curate">github.com/DevOlabode/curate →</a>
+          <div class="links">
+            <a href="https://github.com/DevOlabode/curate">github.com/DevOlabode/curate →</a>
+          </div>
         </article>
       </div>
     </section>
@@ -286,9 +288,13 @@
         <ul class="work">
           <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
           <li>
-            <time><mark>[Date]</mark></time>
-            <span><mark>[Your next project: what it was, plus its link]</mark></span>
+            <time>2026</time>
+            <span>Migrating Vizably's documentation into Codrlabs' shared open repo · <a href="https://github.com/codrlabs/open">github.com/codrlabs/open</a></span>
           </li>
+          <!-- Uncomment once shipped, and add a date and link:
+          <li><time>DATE</time><span>EcoAnalyzer · environmental impact analysis app using OCR and AI · <a href="LINK">LINK</a></span></li>
+          <li><time>DATE</time><span>Vethra · pet healthcare SaaS (clinics, pet profiles, appointments, auth, reviews) · <a href="LINK">LINK</a></span></li>
+          -->
         </ul>
       </div>
     </section>
