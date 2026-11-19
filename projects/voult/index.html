@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://devolabode.github.io/projects/voult/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="article">
@@ -18,14 +18,14 @@
   <meta property="og:description" content="Hosted authentication for Node.js: sessions, OAuth, MFA and passkeys behind one Express router, plus six npm packages.">
   <meta property="og:url" content="https://devolabode.github.io/projects/voult/">
   <meta property="og:site_name" content="Samuel Olabode">
-  <meta property="og:image" content="https://devolabode.github.io/assets/og.png">
+  <meta property="og:image" content="https://devolabode.github.io/assets/og-voult.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Samuel Olabode, full-stack and backend developer. Voult.dev, Vizably, Curate.">
+  <meta property="og:image:alt" content="Voult.dev case study by Samuel Olabode">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://devolabode.github.io/assets/og-voult.png">
 
-  <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Apply a saved theme choice before first paint; everything else is in site.js -->
   <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <script src="/assets/site.js" defer></script>
@@ -37,7 +37,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><img src="/favicon.svg" width="28" height="28" alt="">Samuel Olabode</a>
+      <a class="brand" href="/"><img src="/favicon.png" width="28" height="28" alt="">Samuel Olabode</a>
       <ul>
         <li class="opt"><a href="/#projects">Work</a></li>
         <li class="opt"><a href="/#experience">Experience</a></li>
@@ -58,7 +58,7 @@
     <a class="back" href="/#projects"><span aria-hidden="true">←</span> All work</a>
 
     <header class="cs-head">
-      <p class="pill beta">Private beta · Dec 2026</p>
+      <p class="status beta">Private beta · Dec 2026</p>
       <h1>Voult.dev</h1>
       <p class="lead">Hosted authentication for Node.js. Sign-up, sessions, OAuth, MFA and passkeys run on Voult; an Express or Next.js app mounts one router and gets back to its own features.</p>
       <div class="actions">
@@ -90,7 +90,7 @@
       <section class="row" aria-labelledby="integration-h">
         <h2 id="integration-h">Integration</h2>
         <div class="prose">
-          <p>For an existing Express app, the whole backend integration is one middleware and one router. The router provides every auth route (sign-up, sign-in, sessions, OAuth callbacks, MFA, passkeys), and <code>requireAuth</code> protects the app's own routes.</p>
+          <p>For an existing Express app, the whole backend integration is one middleware and one router. The router provides every auth route (sign-up, sign-in, sessions, OAuth callbacks, MFA, passkeys), and <code>requireAuth</code> protects the app’s own routes.</p>
           <figure class="code-fig">
             <figcaption>server.js</figcaption>
 <pre><code><span class="k">import</span> express <span class="k">from</span> <span class="s">'express'</span>;
@@ -118,8 +118,8 @@ app.get(<span class="s">'/api/me/orders'</span>, requireAuth, (req, res) =&gt; {
             <li><span class="eyebrow">Voult</span><b>Auth API</b><span class="d">Users, sessions, MFA, passkeys and hosted OAuth</span></li>
           </ol>
           <ul class="points">
-            <li><strong>Your server is the only thing that talks to Voult.</strong> It holds the client secret. The browser only calls the app's own <code>/api/auth</code> routes, so no secret or token is ever exposed to page JavaScript.</li>
-            <li><strong>Tokens live in httpOnly cookies</strong> (SameSite=Lax, Secure in production), so an XSS bug can't read them.</li>
+            <li><strong>Your server is the only thing that talks to Voult.</strong> It holds the client secret. The browser only calls the app’s own <code>/api/auth</code> routes, so no secret or token is ever exposed to page JavaScript.</li>
+            <li><strong>Tokens live in httpOnly cookies</strong> (SameSite=Lax, Secure in production), so an XSS bug can’t read them.</li>
             <li><strong>OAuth is hosted.</strong> Google and GitHub redirect to Voult, which sends the user back with a one-time code valid for 60 seconds, and only to callback URLs the developer has allowlisted. Provider keys are stored encrypted in the dashboard, never in app code.</li>
           </ul>
         </div>
@@ -131,7 +131,7 @@ app.get(<span class="s">'/api/me/orders'</span>, requireAuth, (req, res) =&gt; {
           <ul class="points">
             <li><strong>A hosted service with a free tier, not an open-source library.</strong> Developers get working auth without running or patching it themselves: authentication you mount, not maintain.</li>
             <li><strong>Short-lived sessions with revocation.</strong> 15-minute access tokens and 30-day refresh tokens that rotate, with reuse detection. A per-user token version lets Voult revoke every session for an account at once.</li>
-            <li><strong>Focused packages instead of one SDK.</strong> An Express app installs <code>@voult/express</code>, a Next.js app installs <code>@voult/next</code>, and React session state lives in <code>@voult/react</code>, so no app pulls in code it doesn't use.</li>
+            <li><strong>Focused packages instead of one SDK.</strong> An Express app installs <code>@voult/express</code>, a Next.js app installs <code>@voult/next</code>, and React session state lives in <code>@voult/react</code>, so no app pulls in code it doesn’t use.</li>
           </ul>
         </div>
       </section>

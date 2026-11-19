@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devolabode.github.io/sitemap.xml

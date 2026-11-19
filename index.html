@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://devolabode.github.io/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="profile">
@@ -32,8 +32,7 @@
   <link rel="me" href="https://github.com/DevOlabode">
   <link rel="me" href="https://www.linkedin.com/in/samuelolabode/">
 
-  <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Apply a saved theme choice before first paint; everything else is in site.js -->
   <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <script src="/assets/site.js" defer></script>
@@ -57,7 +56,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><img src="/favicon.svg" width="28" height="28" alt="">Samuel Olabode</a>
+      <a class="brand" href="/"><img src="/favicon.png" width="28" height="28" alt="">Samuel Olabode</a>
       <ul>
         <li class="opt"><a href="/#projects">Work</a></li>
         <li class="opt"><a href="/#experience">Experience</a></li>
@@ -77,10 +76,10 @@
   <main id="main">
     <section class="wrap hero" aria-labelledby="hero-h">
       <div>
-        <p class="pill beta">Shipping Voult's private beta · Dec 2026</p>
+        <p class="status beta">Shipping Voult’s private beta · Dec 2026</p>
         <h1 id="hero-h">Samuel Olabode</h1>
         <p class="role">Full-stack &amp; backend developer</p>
-        <p class="lead">I'm a high school student in Edmonton who builds backend-heavy products and ships them to real users: an authentication platform with six published npm packages, a browser extension on the Chrome and Edge stores, and an open-source accessibility scanner.</p>
+        <p class="lead">I’m a high school student in Edmonton who builds backend-heavy products and ships them to real users: an authentication platform with six published npm packages, a browser extension on the Chrome and Edge stores, and an open-source accessibility scanner.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#projects">See my work</a>
           <a class="btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé <span class="arr" aria-hidden="true">↗</span><span class="sr-only">(PDF)</span></a>
@@ -100,7 +99,7 @@
     <section id="projects" class="wrap section" aria-labelledby="projects-h">
       <header class="sec-head">
         <h2 id="projects-h">Selected work</h2>
-        <p>Products I've built and shipped. Each case study covers the architecture and the decisions behind it.</p>
+        <p>Products I’ve built and shipped. Each case study covers the architecture and the decisions behind it.</p>
       </header>
 
       <div class="work">
@@ -109,7 +108,7 @@
           <div class="project-body">
             <div class="project-top">
               <h3 id="voult-h"><a href="/projects/voult/">Voult.dev</a></h3>
-              <span class="pill beta">Private beta · Dec 2026</span>
+              <span class="status beta">Private beta · Dec 2026</span>
             </div>
             <p class="role">Creator · 2025 – present</p>
             <p class="desc">Hosted authentication for Node.js. Sign-up, sessions, OAuth, MFA and passkeys run on Voult; an Express or Next.js app mounts one router and gets back to its own features.</p>
@@ -132,14 +131,14 @@
           <div class="project-body">
             <div class="project-top">
               <h3 id="vizably-h"><a href="/projects/vizably/">Vizably</a></h3>
-              <span class="pill">Live</span>
+              <span class="status">Live</span>
             </div>
             <p class="role">Backend engineer · Codrlabs · 2026 – present</p>
             <p class="desc">Open-source WCAG scanner. Paste a URL and get a report of accessibility violations, with guidance on fixing each one.</p>
             <ul class="points">
-              <li>Started from my idea; I'm its most active contributor, with 130+ commits.</li>
+              <li>Started from my idea; I’m its most active contributor, with 130+ commits.</li>
               <li>Express backend that drives headless Chromium with Puppeteer and axe-core.</li>
-              <li>SSRF protection so user-submitted URLs can't reach internal services.</li>
+              <li>SSRF protection so user-submitted URLs can’t reach internal services.</li>
             </ul>
             <ul class="stack" aria-label="Tech stack"><li>Node.js</li><li>Express</li><li>Puppeteer</li><li>axe-core</li><li>node:test</li></ul>
             <div class="links">
@@ -155,7 +154,7 @@
           <div class="project-body">
             <div class="project-top">
               <h3 id="curate-h"><a href="/projects/curate/">Curate</a></h3>
-              <span class="pill">Live</span>
+              <span class="status">Live</span>
             </div>
             <p class="role">Creator &amp; maintainer · 2026</p>
             <p class="desc">A private bookmark library for developers. Save docs, repos and tools from a popup and file them into collections.</p>
@@ -179,17 +178,17 @@
         <ul class="more-list">
           <li>
             <span><span class="name">Clinic.exe</span><span class="meta">NatHacks 2026 · 3rd place</span></span>
-            <p>An AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request. Python, Flask, LLM API, WebGL.</p>
+            <p>An AI assistant that turns “I’m opening a clinic” into a priced equipment list, a 3D room layout and a quote request. Python, Flask, LLM API, WebGL.</p>
             <a href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">GitHub<span class="sr-only"> repository for Clinic.exe</span> <span aria-hidden="true">↗</span></a>
           </li>
           <li>
             <span><span class="name">@voult packages</span><span class="meta">npm · 6 packages</span></span>
-            <p>The packages behind Voult's integrations: sdk, express, next, react, cli and create-voult-app.</p>
+            <p>The packages behind Voult’s integrations: sdk, express, next, react, cli and create-voult-app.</p>
             <a href="https://www.npmjs.com/org/voult" target="_blank" rel="noopener">npm<span class="sr-only">: @voult packages</span> <span aria-hidden="true">↗</span></a>
           </li>
           <li>
             <span><span class="name">This website</span><span class="meta">HTML · CSS</span></span>
-            <p>Hand-written HTML and CSS with no build step and no trackers. Follows your system's light or dark mode.</p>
+            <p>Hand-written HTML and CSS with no build step and no trackers. Follows your system’s light or dark mode.</p>
             <a href="https://github.com/DevOlabode/devolabode.github.io" target="_blank" rel="noopener">GitHub<span class="sr-only"> repository for this site</span> <span aria-hidden="true">↗</span></a>
           </li>
         </ul>
@@ -207,7 +206,7 @@
           <p class="when"><time datetime="2026-11">Nov 2026</time><br><span class="kind">Award</span></p>
           <div>
             <h3>3rd place, NatHacks 2026 <span class="org">· Problem Provider division</span></h3>
-            <p>With a 4-person team, tackled ValueMed's clinic equipment-planning problem over the hackathon weekend. We built <a href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">Clinic.exe</a>, an AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request.</p>
+            <p>With a 4-person team, tackled ValueMed’s clinic equipment-planning problem over the hackathon weekend. We built <a href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">Clinic.exe</a>, an AI assistant that turns “I’m opening a clinic” into a priced equipment list, a 3D room layout and a quote request.</p>
           </div>
         </li>
         <li>
@@ -217,7 +216,7 @@
             <ul class="points">
               <li>Build the Node.js backend for <a href="/projects/vizably/">Vizably</a>: automated page scanning with Puppeteer and axe-core, report storage, SSRF protection for user-submitted URLs, and GitHub and Google integrations.</li>
               <li>Most active contributor to the repository, with 130+ commits merged through pull-request review.</li>
-              <li>Migrating Vizably's documentation into the organization's shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repository.</li>
+              <li>Migrating Vizably’s documentation into the organization’s shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repository.</li>
               <li>Plan and review work with the team in weekly meetings and on GitHub.</li>
             </ul>
           </div>
@@ -235,7 +234,7 @@
     <section id="skills" class="wrap section" aria-labelledby="skills-h">
       <header class="sec-head">
         <h2 id="skills-h">Skills</h2>
-        <p>The tools I've shipped real projects with.</p>
+        <p>The tools I’ve shipped real projects with.</p>
       </header>
       <dl class="skills">
         <div><dt>Languages</dt><dd>TypeScript, JavaScript, Python, HTML, CSS</dd></div>
@@ -254,7 +253,7 @@
       <div class="two">
         <div class="prose lg">
           <p>Most of what I build sits on the backend: authentication, APIs, and the tooling developers use to integrate them. The part I enjoy most is the stretch between an idea and something other people can install, sign into, or open a pull request against.</p>
-          <p>I'm in high school, graduating in 2027. Outside school I build Voult, maintain Curate as an open-source project, and work on Vizably with the Codrlabs team. That work covers real users, APIs, authentication, deployment, open-source collaboration and developer experience, not just demo projects.</p>
+          <p>I’m in high school, graduating in 2027. Outside school I build Voult, maintain Curate as an open-source project, and work on Vizably with the Codrlabs team. That work covers real users, APIs, authentication, deployment, open-source collaboration and developer experience, not just demo projects.</p>
           <p>Next, I want to apply software engineering to research problems, where better tools can speed up the work itself.</p>
         </div>
         <aside class="card" aria-labelledby="now-h">
@@ -262,7 +261,7 @@
           <ul class="now">
             <li><b>Voult</b>Getting ready for the private beta in December, then a public launch in early 2027.</li>
             <li><b>Vizably</b>Working through open issues and moving the docs into codrlabs/open.</li>
-            <li><b>Curate</b>Next on the roadmap: full-text search across everything you've saved.</li>
+            <li><b>Curate</b>Next on the roadmap: full-text search across everything you’ve saved.</li>
           </ul>
         </aside>
       </div>

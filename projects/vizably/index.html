@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://devolabode.github.io/projects/vizably/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="article">
@@ -18,14 +18,14 @@
   <meta property="og:description" content="An open-source WCAG scanner: Puppeteer and axe-core scanning behind an SSRF-guarded Express API.">
   <meta property="og:url" content="https://devolabode.github.io/projects/vizably/">
   <meta property="og:site_name" content="Samuel Olabode">
-  <meta property="og:image" content="https://devolabode.github.io/assets/og.png">
+  <meta property="og:image" content="https://devolabode.github.io/assets/og-vizably.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Samuel Olabode, full-stack and backend developer. Voult.dev, Vizably, Curate.">
+  <meta property="og:image:alt" content="Vizably case study by Samuel Olabode">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://devolabode.github.io/assets/og-vizably.png">
 
-  <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Apply a saved theme choice before first paint; everything else is in site.js -->
   <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <script src="/assets/site.js" defer></script>
@@ -37,7 +37,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><img src="/favicon.svg" width="28" height="28" alt="">Samuel Olabode</a>
+      <a class="brand" href="/"><img src="/favicon.png" width="28" height="28" alt="">Samuel Olabode</a>
       <ul>
         <li class="opt"><a href="/#projects">Work</a></li>
         <li class="opt"><a href="/#experience">Experience</a></li>
@@ -58,7 +58,7 @@
     <a class="back" href="/#projects"><span aria-hidden="true">←</span> All work</a>
 
     <header class="cs-head">
-      <p class="pill">Live · Open source</p>
+      <p class="status">Live · Open source</p>
       <h1>Vizably</h1>
       <p class="lead">Open-source WCAG accessibility scanner. Paste any URL and get a structured report of violations, mapped to WCAG 2.2, with guidance on how to fix each one. Free, no sign-up.</p>
       <div class="actions">
@@ -89,13 +89,13 @@
       <section class="row" aria-labelledby="part-h">
         <h2 id="part-h">My part</h2>
         <div class="prose">
-          <p>Vizably started as my idea (the repository credits it to me), and I've been its most active contributor since, working mostly on the Node.js backend:</p>
+          <p>Vizably started as my idea (the repository credits it to me), and I’ve been its most active contributor since, working mostly on the Node.js backend:</p>
           <ul class="points">
-            <li>Integrated the Puppeteer and axe-core scan runner into the API's scan endpoints.</li>
+            <li>Integrated the Puppeteer and axe-core scan runner into the API’s scan endpoints.</li>
             <li>Refactored the runner into a class with injectable dependencies, so scans can be tested without launching a real browser.</li>
             <li>SSRF protection for user-submitted URLs, and scan logging that redacts sensitive parts of URLs.</li>
             <li>Report storage and GitHub and Google integrations.</li>
-            <li>Moving the project documentation into the organization's shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repository.</li>
+            <li>Moving the project documentation into the organization’s shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repository.</li>
           </ul>
         </div>
       </section>
@@ -105,7 +105,7 @@
         <div class="prose">
           <ol class="flow steps" aria-label="Steps in a scan">
             <li><b><code>POST /api/scan</code></b><span class="d">The user submits a URL to scan.</span></li>
-            <li><b><code>ssrfGuard</code></b><span class="d">Rejects anything that isn't http(s), plus localhost, loopback and private address ranges.</span></li>
+            <li><b><code>ssrfGuard</code></b><span class="d">Rejects anything that isn’t http(s), plus localhost, loopback and private address ranges.</span></li>
             <li><b><code>scanRunner</code></b><span class="d">Loads the page in headless Chromium with Puppeteer and runs axe-core against it.</span></li>
             <li><b><code>axeTransformer</code></b><span class="d">Turns raw axe results into a typed ScanResult.</span></li>
             <li><b>Report</b><span class="d">A score, the WCAG criteria involved, and how to fix each issue.</span></li>
@@ -124,7 +124,7 @@
       <section class="row" aria-labelledby="result-h">
         <h2 id="result-h">Result</h2>
         <div class="prose">
-          <p>Live at <a href="https://vizably.vercel.app" target="_blank" rel="noopener">vizably.vercel.app</a>. My work goes through Vizably's open-source pull-request workflow with code review, and the team plans in weekly meetings. Next on the roadmap: OAuth sign-in with scans saved to user-owned storage, PDF reports, and rate limiting and queueing for scans.</p>
+          <p>Live at <a href="https://vizably.vercel.app" target="_blank" rel="noopener">vizably.vercel.app</a>. My work goes through Vizably’s open-source pull-request workflow with code review, and the team plans in weekly meetings. Next on the roadmap: OAuth sign-in with scans saved to user-owned storage, PDF reports, and rate limiting and queueing for scans.</p>
         </div>
       </section>
     </div>
