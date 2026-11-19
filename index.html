@@ -4,29 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Samuel Olabode · Full-stack &amp; backend developer</title>
-  <meta name="description" content="High school student and full-stack/backend developer building software products and contributing to open-source projects.">
+  <meta name="description" content="Samuel Olabode is a full-stack and backend developer in Edmonton building developer tools: an authentication platform with six npm packages, a Chrome and Edge extension, and an open-source accessibility scanner.">
   <meta name="author" content="Samuel Olabode">
-  <meta name="theme-color" content="#0b0d0f">
+  <meta name="theme-color" content="#0e0e0e">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://devolabode.github.io/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Samuel Olabode · Full-stack &amp; backend developer">
-  <meta property="og:description" content="High school student and full-stack/backend developer building software products and contributing to open-source projects.">
+  <meta property="og:description" content="Developer tools that real people use: an auth platform with six npm packages, a Chrome and Edge extension, and an open-source accessibility scanner.">
   <meta property="og:url" content="https://devolabode.github.io/">
   <meta property="og:site_name" content="Samuel Olabode">
   <meta property="og:image" content="https://devolabode.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Terminal window reading: $ whoami, Samuel Olabode, full-stack and backend developer.">
+  <meta property="og:image:alt" content="Samuel Olabode, full-stack and backend developer. Voult.dev, Vizably, Curate.">
   <meta property="profile:first_name" content="Samuel">
   <meta property="profile:last_name" content="Olabode">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Samuel Olabode · Full-stack &amp; backend developer">
-  <meta name="twitter:description" content="High school student and full-stack/backend developer building software products and contributing to open-source projects.">
+  <meta name="twitter:description" content="Developer tools that real people use: an auth platform with six npm packages, a Chrome and Edge extension, and an open-source accessibility scanner.">
   <meta name="twitter:image" content="https://devolabode.github.io/assets/og.png">
 
   <link rel="me" href="https://github.com/DevOlabode">
@@ -36,180 +35,300 @@
   <link rel="preload" href="/assets/fonts/plex-mono-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samuel Olabode",
+    "url": "https://devolabode.github.io/",
+    "jobTitle": "Full-stack & backend developer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA" },
+    "sameAs": ["https://github.com/DevOlabode", "https://www.linkedin.com/in/samuelolabode/"]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Skip link, nav and footer are repeated on every page (this file and projects/*/index.html). Keep them in sync. -->
+  <!-- Skip link, top bar and footer are repeated on every page (this file, 404.html, projects/*/index.html). Keep them in sync. -->
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
+      <a class="brand" href="/"><img src="/favicon.svg" width="22" height="22" alt="">Samuel Olabode</a>
       <ul>
-        <li><a href="/#projects">projects</a></li>
-        <li><a href="/#experience">experience</a></li>
-        <li><a href="/#contact">contact</a></li>
-        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">résumé</a></li>
+        <li class="opt"><a href="/#projects">Projects</a></li>
+        <li class="opt"><a href="/#experience">Experience</a></li>
+        <li class="opt"><a href="/#skills">Skills</a></li>
+        <li class="opt"><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <section class="wrap hero">
-      <div class="term">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>samuel@edmonton: ~ — zsh</span></div>
-        <div class="body">
-          <p class="cmd"><span class="ps">$</span> <span class="typed">whoami</span><span class="cursor" aria-hidden="true"></span></p>
-          <h1>Samuel Olabode</h1>
-          <p class="role">Full-stack &amp; backend developer</p>
-          <p class="lead">High school student building and shipping real software, from developer authentication infrastructure to open-source accessibility tooling.</p>
-          <p class="now"><b>Now:</b> Getting Voult ready for its private beta in December, and working on issues in Vizably.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://github.com/DevOlabode" target="_blank" rel="me noopener">GitHub <span aria-hidden="true">↗</span></a>
-            <a class="btn" href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="me noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-            <a class="btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
-          </div>
+    <section class="wrap hero" aria-labelledby="hero-h">
+      <div>
+        <p class="prompt" aria-hidden="true"><span class="ps">~ $</span> whoami<span class="cursor"></span></p>
+        <h1 id="hero-h">Samuel Olabode</h1>
+        <p class="role">Full-stack &amp; backend developer</p>
+        <p class="lead">High school student in Edmonton who builds backend-heavy products and ships them to real users: an authentication platform with six published npm packages, a browser extension on the Chrome and Edge stores, and an open-source accessibility scanner.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View projects <span class="arr" aria-hidden="true">↓</span></a>
+          <a class="btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé <span class="arr" aria-hidden="true">↗</span><span class="sr-only">(PDF)</span></a>
+          <a class="btn" href="https://github.com/DevOlabode" target="_blank" rel="me noopener">GitHub <span class="arr" aria-hidden="true">↗</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="me noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>
         </div>
-        <div class="statusline" aria-hidden="true"><span class="mode">NORMAL</span><span class="file">~/portfolio/index.html</span><span>Edmonton, AB · utf-8</span></div>
       </div>
 
-      <ul class="pills skills" aria-label="Skills">
-        <li>TypeScript</li><li>Node/Express</li><li>React</li><li>MongoDB</li><li>Linux</li><li>Git</li><li>Auth (JWT/OAuth)</li>
-      </ul>
-
-      <ul class="stats" aria-label="Highlights">
-        <li><b>3</b><span>npm packages published for Voult</span></li>
-        <li><b>3rd</b><span>place at NatHacks 2026, Problem Provider division</span></li>
-        <li><b>4</b><span>outside contributions to Curate in its first week</span></li>
-        <li><b>~1 yr</b><span>building Voult.dev from scratch</span></li>
-      </ul>
-    </section>
-
-    <section id="projects" class="wrap" aria-labelledby="projects-h">
-      <h2 id="projects-h"><span><span aria-hidden="true"><span class="ps">$</span> <span class="muted">ls</span> </span>projects</span></h2>
-
-      <article class="term pane card">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/voult</span></div>
-        <div class="split">
-          <div class="shot" data-label="~/voult"><img src="/assets/voult.webp" alt="Screenshot of Voult.dev" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <div class="body">
-            <div class="card-head"><h3><a href="/projects/voult/">Voult.dev</a></h3><span class="badge soon">beta · Dec 2026</span></div>
-            <p class="meta">2025–present · Developer authentication SaaS</p>
-            <p class="sub">Authentication platform for developers, aiming for Clerk-level ease of use at Supabase-level affordability. Ships with its own npm SDKs.</p>
-            <ul class="pills" aria-label="Tech">
-              <li>Node.js</li><li>Express</li><li>MongoDB</li><li>Redis</li><li>JWT</li><li>OAuth</li><li>WebAuthn</li>
-            </ul>
-            <div class="actions">
-              <a class="btn btn-primary" href="/projects/voult/">Case study<span class="sr-only"> for Voult.dev</span> <span aria-hidden="true">→</span></a>
-              <a class="btn" href="https://voult.dev" target="_blank" rel="noopener">Live <span class="sr-only">site for Voult.dev</span><span aria-hidden="true">↗</span></a>
-              <a class="btn" href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Voult.dev</span><span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="term pane card">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/vizably</span></div>
-        <div class="split">
-          <div class="shot" data-label="~/vizably"><img src="/assets/vizably.webp" alt="Screenshot of Vizably" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <div class="body">
-            <div class="card-head"><h3><a href="/projects/vizably/">Vizably</a></h3><span class="badge">live</span></div>
-            <p class="meta">2026 · Codrlabs Solutions · Open source</p>
-            <p class="sub">Open-source accessibility scanner. As a volunteer engineer at <a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a>, I work on the backend scanner and its SSRF protection.</p>
-            <ul class="pills" aria-label="Tech">
-              <li>Node.js</li><li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
-            </ul>
-            <div class="actions">
-              <a class="btn btn-primary" href="/projects/vizably/">Case study<span class="sr-only"> for Vizably</span> <span aria-hidden="true">→</span></a>
-              <a class="btn" href="https://vizably.vercel.app" target="_blank" rel="noopener">Live <span class="sr-only">site for Vizably</span><span aria-hidden="true">↗</span></a>
-              <a class="btn" href="https://github.com/codrlabs/vizably" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Vizably</span><span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="term pane card">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/curate</span></div>
-        <div class="split">
-          <div class="shot" data-label="~/curate"><img src="/assets/curate.webp" alt="Screenshot of Curate" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <div class="body">
-            <div class="card-head"><h3><a href="/projects/curate/">Curate</a></h3><span class="badge">live</span></div>
-            <p class="meta">2026 · Browser extension · Open source</p>
-            <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles. Live on the Chrome Web Store and Edge Add-ons.</p>
-            <ul class="pills" aria-label="Tech">
-              <li>JavaScript</li><li>Chrome &amp; Edge extension</li><li>EJS</li>
-            </ul>
-            <div class="actions">
-              <a class="btn btn-primary" href="/projects/curate/">Case study<span class="sr-only"> for Curate</span> <span aria-hidden="true">→</span></a>
-              <a class="btn" href="https://curate-eight-omega.vercel.app" target="_blank" rel="noopener">Live <span class="sr-only">site for Curate</span><span aria-hidden="true">↗</span></a>
-              <a class="btn" href="https://github.com/DevOlabode/curate" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Curate</span><span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section id="experience" class="wrap" aria-labelledby="experience-h">
-      <h2 id="experience-h"><span><span aria-hidden="true"><span class="ps">$</span> <span class="muted">cat</span> </span>experience</span></h2>
-      <ul class="xp">
-        <!-- ADD NEW EXPERIENCE HERE: copy one item, paste it at the top, edit it -->
-        <li>
-          <time datetime="2026-11">Nov 2026</time>
-          <h3>NatHacks 2026 · 3rd place, Problem Provider division</h3>
-          <p>With a 4-person team, tackled ValueMed's clinic equipment-planning problem. We built <a href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">Clinic.exe</a>, an AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request.</p>
-          <ul class="pills" aria-label="Tech"><li>Python</li><li>Flask</li><li>LLM API</li><li>WebGL</li></ul>
-        </li>
-        <li>
-          <time datetime="2026-01">Jan 2026 – present</time>
-          <h3>Web developer (volunteer) · <a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a></h3>
-          <p>Backend work on <a href="/projects/vizably/">Vizably</a>: page scanning with Puppeteer and axe-core, SSRF protection, report storage and GitHub/Google integrations. Currently migrating its documentation into the shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repo.</p>
-          <ul class="pills" aria-label="Tech"><li>Node.js</li><li>Puppeteer</li><li>axe-core</li></ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="about" class="wrap" aria-labelledby="about-h">
-      <h2 id="about-h"><span><span aria-hidden="true"><span class="ps">$</span> <span class="muted">cat</span> </span>about<span aria-hidden="true">.md</span></span></h2>
-      <div class="about-grid">
-        <div class="prose">
-          <p>I like closing the gap between an idea and a working product, especially developer tools and web applications that are easier to build, use, and maintain.</p>
-          <p>I'm still in high school, but I build and ship software outside of school instead of only following tutorials or making demo projects. My work covers real users, APIs, authentication, deployment, open-source collaboration, and developer experience.</p>
-        </div>
-        <dl class="kv facts">
-          <dt>location</dt><dd>Edmonton, AB</dd>
-          <dt>school</dt><dd>High school, class of 2027</dd>
-          <dt>focus</dt><dd>Auth, backends, dev tools</dd>
-          <dt>interest</dt><dd>Software for research problems</dd>
+      <aside class="panel" aria-label="Profile">
+        <span class="panel-t" aria-hidden="true">~/.profile</span>
+        <dl class="kv">
+          <dt>based in</dt><dd>Edmonton, Alberta, Canada</dd>
+          <dt>school</dt><dd>High school, graduating 2027</dd>
+          <dt>focus</dt><dd>Auth, APIs, developer tools</dd>
+          <dt>languages</dt><dd>TypeScript, JavaScript, Python</dd>
+          <dt>shipping</dt><dd><span class="status beta">Voult private beta, Dec 2026</span></dd>
+          <dt>email</dt><dd><a href="mailto:solabode223@gmail.com">solabode223@gmail.com</a></dd>
+          <dt>github</dt><dd><a href="https://github.com/DevOlabode" target="_blank" rel="me noopener">DevOlabode</a></dd>
         </dl>
+      </aside>
+    </section>
+
+    <div class="wrap">
+      <ul class="metrics" aria-label="Highlights">
+        <li><b>6</b><span>npm packages published under @voult</span></li>
+        <li><b>2</b><span>browser stores: Curate is live on Chrome and Edge</span></li>
+        <li><b>3rd</b><span>place at NatHacks 2026, Problem Provider division</span></li>
+        <li><b>130+</b><span>commits to Vizably, the most of any contributor</span></li>
+      </ul>
+    </div>
+
+    <section id="projects" class="wrap section" aria-labelledby="projects-h">
+      <header class="sec-head">
+        <h2 id="projects-h">Projects</h2>
+        <p>Products I've built and shipped</p>
+      </header>
+
+      <div class="work">
+        <article class="panel project featured" aria-labelledby="voult-h">
+          <span class="panel-t" aria-hidden="true">~/projects/voult</span>
+          <a class="shot" href="/projects/voult/" tabindex="-1" aria-hidden="true"><img src="/assets/voult.webp" alt="" width="1600" height="1000" decoding="async"></a>
+          <div class="project-body">
+            <h3 id="voult-h"><a href="/projects/voult/">Voult.dev</a></h3>
+            <span class="panel-s status beta">private beta · Dec 2026</span>
+            <p class="label">Creator · 2025 – present</p>
+            <p class="desc">Hosted authentication for Node.js. Sign-up, sessions, OAuth, MFA and passkeys run on Voult; an Express or Next.js app mounts one router and gets back to its own features.</p>
+            <ul class="points">
+              <li>Six npm packages: the SDK, Express and Next.js adapters, React hooks, a CLI and <code>create-voult-app</code>.</li>
+              <li>Sessions in httpOnly cookies: 15-minute access tokens, refresh-token rotation and reuse detection.</li>
+              <li>Hosted OAuth for Google, GitHub and three more providers, with provider keys encrypted server-side.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Redis</li><li>JWT</li><li>OAuth</li><li>WebAuthn</li></ul>
+            <div class="links">
+              <a href="/projects/voult/">Case study<span class="sr-only"> for Voult.dev</span> <span aria-hidden="true">→</span></a>
+              <a href="https://voult.dev" target="_blank" rel="noopener">voult.dev</a>
+              <a href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">Source<span class="sr-only"> code for Voult.dev</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project" aria-labelledby="vizably-h">
+          <span class="panel-t" aria-hidden="true">~/projects/vizably</span>
+          <a class="shot" href="/projects/vizably/" tabindex="-1" aria-hidden="true"><img src="/assets/vizably.webp" alt="" width="1600" height="1000" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            <h3 id="vizably-h"><a href="/projects/vizably/">Vizably</a></h3>
+            <span class="panel-s status">live</span>
+            <p class="label">Backend engineer · Codrlabs · 2026 – present</p>
+            <p class="desc">Open-source WCAG scanner. Paste a URL and get a report of accessibility violations, with guidance on fixing each one.</p>
+            <ul class="points">
+              <li>Started from my idea; I'm its most active contributor, with 130+ commits.</li>
+              <li>Express backend that drives headless Chromium with Puppeteer and axe-core.</li>
+              <li>SSRF protection so user-submitted URLs can't reach internal services.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack"><li>Node.js</li><li>Express</li><li>Puppeteer</li><li>axe-core</li><li>node:test</li></ul>
+            <div class="links">
+              <a href="/projects/vizably/">Case study<span class="sr-only"> for Vizably</span> <span aria-hidden="true">→</span></a>
+              <a href="https://vizably.vercel.app" target="_blank" rel="noopener">vizably.vercel.app</a>
+              <a href="https://github.com/codrlabs/vizably" target="_blank" rel="noopener">Source<span class="sr-only"> code for Vizably</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project" aria-labelledby="curate-h">
+          <span class="panel-t" aria-hidden="true">~/projects/curate</span>
+          <a class="shot" href="/projects/curate/" tabindex="-1" aria-hidden="true"><img src="/assets/curate.webp" alt="" width="1600" height="1000" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            <h3 id="curate-h"><a href="/projects/curate/">Curate</a></h3>
+            <span class="panel-s status">live</span>
+            <p class="label">Creator &amp; maintainer · 2026</p>
+            <p class="desc">A private bookmark library for developers. Save docs, repos and tools from a popup and file them into collections.</p>
+            <ul class="points">
+              <li>Live on the Chrome Web Store and Edge Add-ons from one Manifest V3 build.</li>
+              <li>Express 5 and MongoDB API; the popup signs in with a JWT, with no content scripts or history access.</li>
+              <li>Open-sourced in September 2026; four outside contributions in the first week.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack"><li>JavaScript</li><li>Manifest V3</li><li>Express 5</li><li>MongoDB</li><li>JWT</li></ul>
+            <div class="links">
+              <a href="/projects/curate/">Case study<span class="sr-only"> for Curate</span> <span aria-hidden="true">→</span></a>
+              <a href="https://chromewebstore.google.com/detail/curate/nlkfmdiphacjgicdcagonbfnpcdjfapo" target="_blank" rel="noopener">Chrome Web Store</a>
+              <a href="https://github.com/DevOlabode/curate" target="_blank" rel="noopener">Source<span class="sr-only"> code for Curate</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <ul class="ls" aria-label="More work">
+        <li>
+          <span class="name">clinic.exe</span>
+          <div>
+            <p>NatHacks 2026, 3rd place. An AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request.</p>
+            <p class="meta">Python · Flask · LLM API · WebGL</p>
+          </div>
+          <a class="meta" href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">Source<span class="sr-only"> code for clinic.exe</span></a>
+        </li>
+        <li>
+          <span class="name">@voult/*</span>
+          <div>
+            <p>The npm packages behind Voult's integrations, from the core SDK to a project scaffolder.</p>
+            <p class="meta">sdk · express · next · react · cli · create-voult-app</p>
+          </div>
+          <a class="meta" href="https://www.npmjs.com/org/voult" target="_blank" rel="noopener">npm<span class="sr-only">: @voult packages</span></a>
+        </li>
+        <li>
+          <span class="name">devolabode.github.io</span>
+          <div>
+            <p>This site. Hand-written HTML and CSS, no build step and no trackers.</p>
+            <p class="meta">HTML · CSS</p>
+          </div>
+          <a class="meta" href="https://github.com/DevOlabode/devolabode.github.io" target="_blank" rel="noopener">Source<span class="sr-only"> code for this site</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" class="wrap section" aria-labelledby="experience-h">
+      <header class="sec-head">
+        <h2 id="experience-h">Experience</h2>
+        <p>Work, awards and education</p>
+      </header>
+      <ol class="xp">
+        <!-- ADD NEW ENTRIES HERE: copy one <li>, paste it at the top, edit it -->
+        <li>
+          <p class="when"><time datetime="2026-11">Nov 2026</time><span class="label">award</span></p>
+          <div>
+            <h3>3rd place, NatHacks 2026 <span class="org">· Problem Provider division</span></h3>
+            <p>With a 4-person team, tackled ValueMed's clinic equipment-planning problem over the hackathon weekend. We built <a href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">Clinic.exe</a>, an AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when"><time datetime="2026-01">Jan 2026</time> – present<span class="label">work</span></p>
+          <div>
+            <h3>Web developer (volunteer) <span class="org">· <a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a></span></h3>
+            <ul class="points">
+              <li>Build the Node.js backend for <a href="/projects/vizably/">Vizably</a>: automated page scanning with Puppeteer and axe-core, report storage, SSRF protection for user-submitted URLs, and GitHub and Google integrations.</li>
+              <li>Most active contributor to the repository, with 130+ commits merged through pull-request review.</li>
+              <li>Migrating Vizably's documentation into the organization's shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repository.</li>
+              <li>Plan and review work with the team in weekly meetings and on GitHub.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when">Class of 2027<span class="label">education</span></p>
+          <div>
+            <h3>High school diploma <span class="org">· Edmonton, Alberta</span></h3>
+            <p>Expected graduation July 2027.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="wrap section" aria-labelledby="skills-h">
+      <header class="sec-head">
+        <h2 id="skills-h">Skills</h2>
+        <p>What I've shipped with</p>
+      </header>
+      <dl class="skills">
+        <div><dt class="label">Languages</dt><dd>TypeScript, JavaScript, Python, HTML, CSS</dd></div>
+        <div><dt class="label">Backend</dt><dd>Node.js, Express, REST API design, Passport.js</dd></div>
+        <div><dt class="label">Auth &amp; security</dt><dd>JWT, OAuth 2.0, passkeys (WebAuthn), MFA, CSRF and SSRF protection</dd></div>
+        <div><dt class="label">Frontend</dt><dd>React, Vite, EJS, Bootstrap, browser extensions (Manifest V3)</dd></div>
+        <div><dt class="label">Data</dt><dd>MongoDB, Mongoose, Redis</dd></div>
+        <div><dt class="label">Tooling</dt><dd>Git &amp; GitHub, Linux, Puppeteer, Postman, npm publishing, testing, deployment</dd></div>
+      </dl>
+    </section>
+
+    <section id="about" class="wrap section" aria-labelledby="about-h">
+      <header class="sec-head">
+        <h2 id="about-h">About</h2>
+      </header>
+      <div class="two">
+        <div class="prose">
+          <p>Most of what I build sits on the backend: authentication, APIs, and the tooling developers use to integrate them. The part I enjoy most is the stretch between an idea and something other people can install, sign into, or open a pull request against.</p>
+          <p>I'm in high school, graduating in 2027. Outside school I build Voult, maintain Curate as an open-source project, and work on Vizably with the Codrlabs team. That work covers real users, APIs, authentication, deployment, open-source collaboration and developer experience, not just demo projects.</p>
+          <p>Next, I want to apply software engineering to research problems, where better tools can speed up the work itself.</p>
+        </div>
+        <aside class="panel" aria-labelledby="now-h">
+          <span class="panel-t" aria-hidden="true">~/now.md</span>
+          <span class="panel-s">updated Nov 2026</span>
+          <h3 id="now-h" class="sr-only">What I'm doing now</h3>
+          <ul class="now">
+            <li><b>Voult</b>Getting ready for the private beta in December, then a public launch in early 2027.</li>
+            <li><b>Vizably</b>Working through open issues and moving the docs into codrlabs/open.</li>
+            <li><b>Curate</b>Next on the roadmap: full-text search across everything you've saved.</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section id="contact" class="wrap" aria-labelledby="contact-h">
-      <h2 id="contact-h"><span><span aria-hidden="true"><span class="ps">$</span> </span>contact</span></h2>
-      <div class="term cta">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/contact</span></div>
-        <div class="body">
-          <div>
-            <h3>Let's build something.</h3>
-            <p>Have a role, research project or open-source idea in mind? Email is the fastest way to reach me.</p>
-            <div class="actions">
-              <a class="btn btn-primary" href="mailto:solabode223@gmail.com">Email me</a>
-              <a class="btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé (PDF, 50 KB) <span aria-hidden="true">↗</span></a>
-            </div>
+    <section id="contact" class="wrap section" aria-labelledby="contact-h">
+      <header class="sec-head">
+        <h2 id="contact-h">Contact</h2>
+      </header>
+      <div class="two">
+        <div class="prose">
+          <p>Have a role, research project or open-source idea in mind? Email is the fastest way to reach me.</p>
+          <div class="email-row">
+            <a class="email" href="mailto:solabode223@gmail.com">solabode223@gmail.com</a>
+            <button class="btn" type="button" data-copy="solabode223@gmail.com" hidden>Copy</button>
+            <span class="sr-only" role="status" id="copy-status"></span>
           </div>
-          <dl class="kv">
-            <dt>email</dt><dd><a href="mailto:solabode223@gmail.com">solabode223@gmail.com</a></dd>
-            <dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="me noopener">in/samuelolabode</a></dd>
-            <dt>github</dt><dd><a href="https://github.com/DevOlabode" target="_blank" rel="me noopener">DevOlabode</a></dd>
-          </dl>
         </div>
+        <dl class="kv">
+          <dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="me noopener">in/samuelolabode</a></dd>
+          <dt>github</dt><dd><a href="https://github.com/DevOlabode" target="_blank" rel="me noopener">DevOlabode</a></dd>
+          <dt>résumé</dt><dd><a href="/assets/resume.pdf" target="_blank" rel="noopener">resume.pdf</a> <span class="muted">(50 KB)</span></dd>
+          <dt>location</dt><dd>Edmonton, AB · Mountain Time</dd>
+        </dl>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
-    <span>Hand-written HTML &amp; CSS · no frameworks, no trackers</span>
+  <footer class="wrap footer">
+    <span>© 2026 Samuel Olabode</span>
+    <ul>
+      <li><a href="https://github.com/DevOlabode" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:solabode223@gmail.com">Email</a></li>
+      <li><a href="https://github.com/DevOlabode/devolabode.github.io" target="_blank" rel="noopener">Site source</a></li>
+    </ul>
   </footer>
 
+  <script>
+    // Copy-email button: hidden without JS, shown when the Clipboard API exists.
+    document.querySelectorAll('[data-copy]').forEach(function (btn) {
+      if (!navigator.clipboard) return;
+      var status = document.getElementById('copy-status');
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(btn.dataset.copy).then(function () {
+          btn.textContent = 'Copied';
+          status.textContent = 'Email address copied';
+        }, function () {
+          btn.textContent = 'Copy failed';
+        });
+        setTimeout(function () { btn.textContent = 'Copy'; status.textContent = ''; }, 1800);
+      });
+    });
+  </script>
 </body>
 </html>

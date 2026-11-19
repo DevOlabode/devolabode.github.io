@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Voult.dev · Samuel Olabode</title>
-  <meta name="description" content="Voult.dev: a developer authentication platform with password, OAuth, magic-link and passkey sign-in, MFA, and npm SDKs. Case study by Samuel Olabode.">
+  <title>Voult.dev case study · Samuel Olabode</title>
+  <meta name="description" content="Voult.dev: hosted authentication for Node.js with password, OAuth, magic-link and passkey sign-in, MFA, and six npm packages. Case study by Samuel Olabode.">
   <meta name="author" content="Samuel Olabode">
-  <meta name="theme-color" content="#0b0d0f">
+  <meta name="theme-color" content="#0e0e0e">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://devolabode.github.io/projects/voult/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Voult.dev · Samuel Olabode">
-  <meta property="og:description" content="A developer authentication platform with password, OAuth, magic-link and passkey sign-in, MFA, and npm SDKs.">
+  <meta property="og:title" content="Voult.dev case study · Samuel Olabode">
+  <meta property="og:description" content="Hosted authentication for Node.js: sessions, OAuth, MFA and passkeys behind one Express router, plus six npm packages.">
   <meta property="og:url" content="https://devolabode.github.io/projects/voult/">
   <meta property="og:site_name" content="Samuel Olabode">
   <meta property="og:image" content="https://devolabode.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Terminal window reading: $ whoami, Samuel Olabode, full-stack and backend developer.">
+  <meta property="og:image:alt" content="Samuel Olabode, full-stack and backend developer. Voult.dev, Vizably, Curate.">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" href="/assets/fonts/plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -30,76 +30,137 @@
 </head>
 <body>
 
-  <!-- Skip link, nav and footer are repeated on every page (index.html and projects/*/index.html). Keep them in sync. -->
+  <!-- Skip link, top bar and footer are repeated on every page (index.html, 404.html, projects/*/index.html). Keep them in sync. -->
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
+      <a class="brand" href="/"><img src="/favicon.svg" width="22" height="22" alt="">Samuel Olabode</a>
       <ul>
-        <li><a href="/#projects">projects</a></li>
-        <li><a href="/#experience">experience</a></li>
-        <li><a href="/#contact">contact</a></li>
-        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">résumé</a></li>
+        <li class="opt"><a href="/#projects">Projects</a></li>
+        <li class="opt"><a href="/#experience">Experience</a></li>
+        <li class="opt"><a href="/#skills">Skills</a></li>
+        <li class="opt"><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main" class="wrap">
-    <div class="page-head">
-      <p class="cmd"><span class="ps">$</span> cat projects/voult.md</p>
-      <div class="head-row"><h1>Voult.dev</h1><span class="badge soon">beta · Dec 2026</span></div>
-      <p class="meta">2025–present · Developer authentication SaaS</p>
-      <p class="sub">Authentication platform for developers, built from scratch over about a year.</p>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">~</a> / <a href="/#projects">projects</a> / <span aria-current="page">voult</span></nav>
+
+    <header class="cs-head">
+      <div class="title"><h1>Voult.dev</h1><span class="status beta">private beta · Dec 2026</span></div>
+      <p class="lead">Hosted authentication for Node.js. Sign-up, sessions, OAuth, MFA and passkeys run on Voult; an Express or Next.js app mounts one router and gets back to its own features.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://voult.dev" target="_blank" rel="noopener">Live <span class="sr-only">site for Voult.dev</span><span aria-hidden="true">↗</span></a>
-        <a class="btn" href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Voult.dev</span><span aria-hidden="true">↗</span></a>
+        <a class="btn btn-primary" href="https://voult.dev" target="_blank" rel="noopener">voult.dev <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">Source <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://www.npmjs.com/org/voult" target="_blank" rel="noopener">npm packages <span class="arr" aria-hidden="true">↗</span></a>
       </div>
-    </div>
+    </header>
 
-    <div class="case">
-      <article class="term pane">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/voult/README.md</span></div>
-        <div class="shot" data-label="~/voult"><img src="/assets/voult.webp" alt="Screenshot of Voult.dev" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
-        <div class="body">
-          <dl class="story">
-            <dt>Problem</dt>
-            <dd>Developers picking an auth provider usually trade ease of use against cost. Voult aims for Clerk-level ease of use at Supabase-level affordability.</dd>
-            <dt>Decision</dt>
-            <dd>Built it as a paid SaaS with a free tier rather than an open-source library, and split the SDK into focused npm packages: <code>@voult/sdk</code>, <code>@voult/express</code> and <code>@voult/cli</code>.</dd>
-            <dt>Built</dt>
-            <dd>Password, OAuth, magic-link and passkey sign-in, MFA, JWT access/refresh tokens with revocation, email verification, and the three npm packages.</dd>
-            <dt>In progress</dt>
-            <dd>A developer portal for configuring, monitoring and debugging apps, and a <code>create-voult-app</code> starter template.</dd>
-            <dt>Result</dt>
-            <dd>Live at voult.dev. First roadmap phase completed September 2026. Private beta planned for December 2026, public launch early 2027.</dd>
-            <!-- Room for more: Architecture, Lessons, ... (same dt/dd pattern) -->
-          </dl>
-        </div>
-      </article>
+    <dl class="facts">
+      <div><dt class="label">Role</dt><dd>Creator</dd></div>
+      <div><dt class="label">Timeline</dt><dd>2025 – present</dd></div>
+      <div><dt class="label">Status</dt><dd>Preview now; private beta Dec 2026, public launch early 2027</dd></div>
+      <div><dt class="label">Stack</dt><dd>Node.js, Express, MongoDB, Redis, JWT, OAuth, WebAuthn</dd></div>
+    </dl>
 
-      <aside class="term overview" aria-label="Project overview">
-        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>overview</span></div>
-        <div class="body">
-          <dl class="kv stacked">
-            <dt>Role</dt><dd>Creator</dd>
-            <dt>Timeline</dt><dd>2025 – present</dd>
-            <dt>Status</dt><dd>Private beta, December 2026</dd>
-            <dt>Packages</dt><dd>@voult/sdk<br>@voult/express<br>@voult/cli</dd>
-            <dt>Stack</dt><dd><ul class="pills"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Redis</li><li>JWT</li><li>OAuth</li><li>WebAuthn</li></ul></dd>
-          </dl>
+    <figure class="panel cs-shot">
+      <span class="panel-t" aria-hidden="true">voult.dev</span>
+      <div class="shot"><img src="/assets/voult.webp" alt="Voult.dev landing page reading 'Authentication you mount, not maintain.' above a preview of the developer dashboard" width="1600" height="1000" fetchpriority="high"></div>
+    </figure>
+
+    <div class="cs-body">
+      <section class="row" aria-labelledby="problem-h">
+        <h2 id="problem-h" class="hash">Problem</h2>
+        <div class="prose">
+          <p>Picking an auth provider usually means trading ease of use against cost. Hosted services are quick to set up but get expensive as an app grows; libraries are cheap but leave you maintaining password hashing, token rotation and OAuth flows yourself. Voult aims for Clerk-level ease of use at Supabase-level affordability.</p>
         </div>
-      </aside>
+      </section>
+
+      <section class="row" aria-labelledby="integration-h">
+        <h2 id="integration-h" class="hash">Integration</h2>
+        <div class="prose">
+          <p>For an existing Express app, the whole backend integration is one middleware and one router. The router provides every auth route (sign-up, sign-in, sessions, OAuth callbacks, MFA, passkeys), and <code>requireAuth</code> protects the app's own routes.</p>
+<pre class="code"><code><span class="c">// server.js</span>
+<span class="k">import</span> express <span class="k">from</span> <span class="s">'express'</span>;
+<span class="k">import</span> { createVoultMiddleware, createVoultRouter, requireAuth } <span class="k">from</span> <span class="s">'@voult/express'</span>;
+
+<span class="k">const</span> app = express();
+app.use(createVoultMiddleware());           <span class="c">// req.voult on every request</span>
+app.use(<span class="s">'/api/auth'</span>, createVoultRouter());  <span class="c">// every auth route</span>
+
+<span class="c">// Your own API: 401 JSON unless someone is signed in</span>
+app.get(<span class="s">'/api/me/orders'</span>, requireAuth, (req, res) =&gt; {
+  res.json({ user: req.voult.getCurrentUser(), orders: [] });
+});</code></pre>
+          <p>New projects can start from <code>npx create-voult-app</code>, which scaffolds an Express + React, Next.js or minimal Express app with credentials already wired in. <code>npx voult doctor</code> checks the setup (environment, secrets, callback URLs, providers) and prints the exact fix for anything wrong, so misconfiguration shows up before users hit it.</p>
+        </div>
+      </section>
+
+      <section class="row" aria-labelledby="arch-h">
+        <h2 id="arch-h" class="hash">Architecture</h2>
+        <div class="prose">
+<pre class="code" role="img" aria-label="Diagram: the browser's React app calls the developer's server through @voult/react. The server, using @voult/express, holds the client secret and is the only part that talks to Voult's auth API, which handles users, sessions, MFA, passkeys and hosted OAuth.">browser              your server                  voult
+-------              -----------                  -----
+@voult/react  --->   @voult/express  --secret-->  auth API
+useSession()         /api/auth/* routes           users, sessions, MFA,
+signIn()             httpOnly cookies             passkeys, hosted OAuth</pre>
+          <ul class="points">
+            <li><strong>Your server is the only thing that talks to Voult.</strong> It holds the client secret. The browser only calls the app's own <code>/api/auth</code> routes, so no secret or token is ever exposed to page JavaScript.</li>
+            <li><strong>Tokens live in httpOnly cookies</strong> (SameSite=Lax, Secure in production), so an XSS bug can't read them.</li>
+            <li><strong>OAuth is hosted.</strong> Google and GitHub redirect to Voult, which sends the user back with a one-time code valid for 60 seconds, and only to callback URLs the developer has allowlisted. Provider keys are stored encrypted in the dashboard, never in app code.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="row" aria-labelledby="decisions-h">
+        <h2 id="decisions-h" class="hash">Decisions</h2>
+        <div class="prose">
+          <ul class="points">
+            <li><strong>A hosted service with a free tier, not an open-source library.</strong> Developers get working auth without running or patching it themselves: authentication you mount, not maintain.</li>
+            <li><strong>Short-lived sessions with revocation.</strong> 15-minute access tokens and 30-day refresh tokens that rotate, with reuse detection. A per-user token version lets Voult revoke every session for an account at once.</li>
+            <li><strong>Focused packages instead of one SDK.</strong> An Express app installs <code>@voult/express</code>, a Next.js app installs <code>@voult/next</code>, and React session state lives in <code>@voult/react</code>, so no app pulls in code it doesn't use.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="row" aria-labelledby="built-h">
+        <h2 id="built-h" class="hash">What I built</h2>
+        <div class="prose">
+          <ul class="points">
+            <li>Password, magic-link, passkey and OAuth sign-in (Google, GitHub, Facebook, LinkedIn, Microsoft).</li>
+            <li>MFA with authenticator apps and backup codes, enforced on every sign-in path.</li>
+            <li>Email verification, password reset, session list and revoke, linked accounts and account deletion.</li>
+            <li>Six npm packages: <code>@voult/sdk</code>, <code>@voult/express</code>, <code>@voult/next</code>, <code>@voult/react</code>, <code>@voult/cli</code> and <code>create-voult-app</code>.</li>
+            <li>Rate limiting, audit logging, CSRF protection and input validation on sensitive endpoints.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="row" aria-labelledby="status-h">
+        <h2 id="status-h" class="hash">Status</h2>
+        <div class="prose">
+          <p>Live in preview at <a href="https://voult.dev" target="_blank" rel="noopener">voult.dev</a>. The first roadmap phase was completed in September 2026. Next is the developer dashboard for configuring, monitoring and debugging apps, then a private beta in December 2026 and a public launch in early 2027.</p>
+        </div>
+      </section>
     </div>
 
     <nav class="pager" aria-label="More projects">
-      <a href="/projects/curate/"><small>← previous</small>Curate</a>
-      <a class="next" href="/projects/vizably/"><small>next →</small>Vizably</a>
+      <a class="panel" href="/projects/curate/"><span class="label">← previous</span>Curate</a>
+      <a class="panel next" href="/projects/vizably/"><span class="label">next →</span>Vizably</a>
     </nav>
   </main>
 
-  <footer class="wrap">
-    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
-    <span>Hand-written HTML &amp; CSS · no frameworks, no trackers</span>
+  <footer class="wrap footer">
+    <span>© 2026 Samuel Olabode</span>
+    <ul>
+      <li><a href="https://github.com/DevOlabode" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:solabode223@gmail.com">Email</a></li>
+      <li><a href="https://github.com/DevOlabode/devolabode.github.io" target="_blank" rel="noopener">Site source</a></li>
+    </ul>
   </footer>
 
 </body>
