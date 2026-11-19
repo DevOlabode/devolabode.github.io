@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curate · Samuel Olabode</title>
+  <meta name="description" content="Curate: a browser extension for developers to save and organize resources, live on the Chrome Web Store and Edge Add-ons. Case study by Samuel Olabode.">
+  <meta name="author" content="Samuel Olabode">
+  <meta name="theme-color" content="#0b0d0f">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://devolabode.github.io/projects/curate/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Curate · Samuel Olabode">
+  <meta property="og:description" content="A browser extension for developers to save and organize resources, live on the Chrome Web Store and Edge Add-ons.">
+  <meta property="og:url" content="https://devolabode.github.io/projects/curate/">
+  <meta property="og:site_name" content="Samuel Olabode">
+  <meta property="og:image" content="https://devolabode.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Terminal window reading: $ whoami, Samuel Olabode, full-stack and backend developer.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/assets/fonts/plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/plex-mono-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+  <!-- Nav and footer are repeated on every page (index.html and projects/*/index.html). Keep them in sync. -->
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
+    <ul>
+      <li><a href="/#projects">projects</a></li>
+      <li><a href="/#experience">experience</a></li>
+      <li><a href="/#contact">contact</a></li>
+      <li><a href="/assets/resume.pdf">résumé</a></li>
+    </ul>
+  </nav>
+
+  <header class="wrap page-head">
+    <p class="cmd"><span class="ps">$</span> cat projects/curate.md</p>
+    <h1>Curate</h1>
+    <p class="meta">2026 · Browser extension · Open source</p>
+    <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://curate-eight-omega.vercel.app">Live <span class="sr-only">site for Curate</span><span aria-hidden="true">↗</span></a>
+      <a class="btn" href="https://github.com/DevOlabode/curate">GitHub <span class="sr-only">repository for Curate</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="term pane">
+      <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/curate</span></div>
+      <div class="shot" data-label="~/curate"><img src="/assets/curate.webp" alt="Screenshot of Curate" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
+      <div class="body">
+        <dl>
+          <dt>Problem</dt>
+          <dd>Developers find useful resources constantly and lose track of them across tabs and bookmarks.</dd>
+          <dt>Decision</dt>
+          <dd>Open-sourced it a month after launch.</dd>
+          <dt>Built</dt>
+          <dd>The extension and web app, with authentication, bookmark management and collections.</dd>
+          <dt>Result</dt>
+          <dd>Launched August 2026 on the Chrome Web Store and Edge Add-ons. Made open source in September 2026 and received four outside contributions in the first week.</dd>
+          <!-- Room for more: Architecture, Lessons, ... (same dt/dd pattern) -->
+        </dl>
+        <ul class="pills" aria-label="Tech">
+          <li>JavaScript</li><li>Chrome &amp; Edge extension</li><li>EJS</li>
+        </ul>
+      </div>
+    </div>
+    <a class="back" href="/#projects"><span aria-hidden="true">← </span>All projects</a>
+  </main>
+
+  <footer class="wrap">© 2026 Samuel Olabode · Edmonton, Alberta</footer>
+
+</body>
+</html>
