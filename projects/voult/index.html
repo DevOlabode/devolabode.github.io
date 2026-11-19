@@ -6,8 +6,9 @@
   <title>Voult.dev case study · Samuel Olabode</title>
   <meta name="description" content="Voult.dev: hosted authentication for Node.js with password, OAuth, magic-link and passkey sign-in, MFA, and six npm packages. Case study by Samuel Olabode.">
   <meta name="author" content="Samuel Olabode">
-  <meta name="theme-color" content="#0e0e0e">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://devolabode.github.io/projects/voult/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -23,68 +24,76 @@
   <meta property="og:image:alt" content="Samuel Olabode, full-stack and backend developer. Voult.dev, Vizably, Curate.">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="preload" href="/assets/fonts/plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/plex-mono-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Apply a saved theme choice before first paint; everything else is in site.js -->
+  <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="/assets/site.js" defer></script>
   <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
-  <!-- Skip link, top bar and footer are repeated on every page (index.html, 404.html, projects/*/index.html). Keep them in sync. -->
+  <!-- Skip link, top bar (incl. theme toggle) and footer are repeated on every page (index.html, 404.html, projects/*/index.html). Keep them in sync. -->
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><img src="/favicon.svg" width="22" height="22" alt="">Samuel Olabode</a>
+      <a class="brand" href="/"><img src="/favicon.svg" width="28" height="28" alt="">Samuel Olabode</a>
       <ul>
-        <li class="opt"><a href="/#projects">Projects</a></li>
+        <li class="opt"><a href="/#projects">Work</a></li>
         <li class="opt"><a href="/#experience">Experience</a></li>
-        <li class="opt"><a href="/#skills">Skills</a></li>
         <li class="opt"><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li class="opt"><a href="/#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden>
+            <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2M12 20.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M1.5 12h2M20.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+          </button>
+        </li>
         <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main" class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">~</a> / <a href="/#projects">projects</a> / <span aria-current="page">voult</span></nav>
+    <a class="back" href="/#projects"><span aria-hidden="true">←</span> All work</a>
 
     <header class="cs-head">
-      <div class="title"><h1>Voult.dev</h1><span class="status beta">private beta · Dec 2026</span></div>
+      <p class="pill beta">Private beta · Dec 2026</p>
+      <h1>Voult.dev</h1>
       <p class="lead">Hosted authentication for Node.js. Sign-up, sessions, OAuth, MFA and passkeys run on Voult; an Express or Next.js app mounts one router and gets back to its own features.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://voult.dev" target="_blank" rel="noopener">voult.dev <span class="arr" aria-hidden="true">↗</span></a>
-        <a class="btn" href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">Source <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn btn-primary" href="https://voult.dev" target="_blank" rel="noopener">Visit voult.dev <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">↗</span></a>
         <a class="btn" href="https://www.npmjs.com/org/voult" target="_blank" rel="noopener">npm packages <span class="arr" aria-hidden="true">↗</span></a>
       </div>
     </header>
 
     <dl class="facts">
-      <div><dt class="label">Role</dt><dd>Creator</dd></div>
-      <div><dt class="label">Timeline</dt><dd>2025 – present</dd></div>
-      <div><dt class="label">Status</dt><dd>Preview now; private beta Dec 2026, public launch early 2027</dd></div>
-      <div><dt class="label">Stack</dt><dd>Node.js, Express, MongoDB, Redis, JWT, OAuth, WebAuthn</dd></div>
+      <div><dt class="eyebrow">Role</dt><dd>Creator</dd></div>
+      <div><dt class="eyebrow">Timeline</dt><dd>2025 – present</dd></div>
+      <div><dt class="eyebrow">Status</dt><dd>Preview now; private beta Dec 2026, public launch early 2027</dd></div>
+      <div><dt class="eyebrow">Stack</dt><dd>Node.js, Express, MongoDB, Redis, JWT, OAuth, WebAuthn</dd></div>
     </dl>
 
-    <figure class="panel cs-shot">
-      <span class="panel-t" aria-hidden="true">voult.dev</span>
-      <div class="shot"><img src="/assets/voult.webp" alt="Voult.dev landing page reading 'Authentication you mount, not maintain.' above a preview of the developer dashboard" width="1600" height="1000" fetchpriority="high"></div>
+    <figure class="shot cs-shot tint-voult">
+      <img src="/assets/voult.webp" alt="Voult.dev landing page reading 'Authentication you mount, not maintain.' above a preview of the developer dashboard" width="1600" height="1000" fetchpriority="high">
     </figure>
 
     <div class="cs-body">
       <section class="row" aria-labelledby="problem-h">
-        <h2 id="problem-h" class="hash">Problem</h2>
+        <h2 id="problem-h">Problem</h2>
         <div class="prose">
           <p>Picking an auth provider usually means trading ease of use against cost. Hosted services are quick to set up but get expensive as an app grows; libraries are cheap but leave you maintaining password hashing, token rotation and OAuth flows yourself. Voult aims for Clerk-level ease of use at Supabase-level affordability.</p>
         </div>
       </section>
 
       <section class="row" aria-labelledby="integration-h">
-        <h2 id="integration-h" class="hash">Integration</h2>
+        <h2 id="integration-h">Integration</h2>
         <div class="prose">
           <p>For an existing Express app, the whole backend integration is one middleware and one router. The router provides every auth route (sign-up, sign-in, sessions, OAuth callbacks, MFA, passkeys), and <code>requireAuth</code> protects the app's own routes.</p>
-<pre class="code"><code><span class="c">// server.js</span>
-<span class="k">import</span> express <span class="k">from</span> <span class="s">'express'</span>;
+          <figure class="code-fig">
+            <figcaption>server.js</figcaption>
+<pre><code><span class="k">import</span> express <span class="k">from</span> <span class="s">'express'</span>;
 <span class="k">import</span> { createVoultMiddleware, createVoultRouter, requireAuth } <span class="k">from</span> <span class="s">'@voult/express'</span>;
 
 <span class="k">const</span> app = express();
@@ -95,18 +104,19 @@ app.use(<span class="s">'/api/auth'</span>, createVoultRouter());  <span class="
 app.get(<span class="s">'/api/me/orders'</span>, requireAuth, (req, res) =&gt; {
   res.json({ user: req.voult.getCurrentUser(), orders: [] });
 });</code></pre>
+          </figure>
           <p>New projects can start from <code>npx create-voult-app</code>, which scaffolds an Express + React, Next.js or minimal Express app with credentials already wired in. <code>npx voult doctor</code> checks the setup (environment, secrets, callback URLs, providers) and prints the exact fix for anything wrong, so misconfiguration shows up before users hit it.</p>
         </div>
       </section>
 
       <section class="row" aria-labelledby="arch-h">
-        <h2 id="arch-h" class="hash">Architecture</h2>
+        <h2 id="arch-h">Architecture</h2>
         <div class="prose">
-<pre class="code" role="img" aria-label="Diagram: the browser's React app calls the developer's server through @voult/react. The server, using @voult/express, holds the client secret and is the only part that talks to Voult's auth API, which handles users, sessions, MFA, passkeys and hosted OAuth.">browser              your server                  voult
--------              -----------                  -----
-@voult/react  --->   @voult/express  --secret-->  auth API
-useSession()         /api/auth/* routes           users, sessions, MFA,
-signIn()             httpOnly cookies             passkeys, hosted OAuth</pre>
+          <ol class="flow h" aria-label="How a request flows through Voult">
+            <li><span class="eyebrow">Browser</span><b><code>@voult/react</code></b><span class="d">Session state, sign-in actions and OAuth buttons</span></li>
+            <li><span class="eyebrow">Your server</span><b><code>@voult/express</code></b><span class="d">The <code>/api/auth</code> routes and httpOnly cookies; holds the client secret</span></li>
+            <li><span class="eyebrow">Voult</span><b>Auth API</b><span class="d">Users, sessions, MFA, passkeys and hosted OAuth</span></li>
+          </ol>
           <ul class="points">
             <li><strong>Your server is the only thing that talks to Voult.</strong> It holds the client secret. The browser only calls the app's own <code>/api/auth</code> routes, so no secret or token is ever exposed to page JavaScript.</li>
             <li><strong>Tokens live in httpOnly cookies</strong> (SameSite=Lax, Secure in production), so an XSS bug can't read them.</li>
@@ -116,7 +126,7 @@ signIn()             httpOnly cookies             passkeys, hosted OAuth</pre>
       </section>
 
       <section class="row" aria-labelledby="decisions-h">
-        <h2 id="decisions-h" class="hash">Decisions</h2>
+        <h2 id="decisions-h">Decisions</h2>
         <div class="prose">
           <ul class="points">
             <li><strong>A hosted service with a free tier, not an open-source library.</strong> Developers get working auth without running or patching it themselves: authentication you mount, not maintain.</li>
@@ -127,7 +137,7 @@ signIn()             httpOnly cookies             passkeys, hosted OAuth</pre>
       </section>
 
       <section class="row" aria-labelledby="built-h">
-        <h2 id="built-h" class="hash">What I built</h2>
+        <h2 id="built-h">What I built</h2>
         <div class="prose">
           <ul class="points">
             <li>Password, magic-link, passkey and OAuth sign-in (Google, GitHub, Facebook, LinkedIn, Microsoft).</li>
@@ -140,7 +150,7 @@ signIn()             httpOnly cookies             passkeys, hosted OAuth</pre>
       </section>
 
       <section class="row" aria-labelledby="status-h">
-        <h2 id="status-h" class="hash">Status</h2>
+        <h2 id="status-h">Status</h2>
         <div class="prose">
           <p>Live in preview at <a href="https://voult.dev" target="_blank" rel="noopener">voult.dev</a>. The first roadmap phase was completed in September 2026. Next is the developer dashboard for configuring, monitoring and debugging apps, then a private beta in December 2026 and a public launch in early 2027.</p>
         </div>
@@ -148,13 +158,13 @@ signIn()             httpOnly cookies             passkeys, hosted OAuth</pre>
     </div>
 
     <nav class="pager" aria-label="More projects">
-      <a class="panel" href="/projects/curate/"><span class="label">← previous</span>Curate</a>
-      <a class="panel next" href="/projects/vizably/"><span class="label">next →</span>Vizably</a>
+      <a href="/projects/curate/"><span class="eyebrow">← Previous</span>Curate</a>
+      <a class="next" href="/projects/vizably/"><span class="eyebrow">Next →</span>Vizably</a>
     </nav>
   </main>
 
   <footer class="wrap footer">
-    <span>© 2026 Samuel Olabode</span>
+    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
     <ul>
       <li><a href="https://github.com/DevOlabode" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="noopener">LinkedIn</a></li>
