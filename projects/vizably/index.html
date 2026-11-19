@@ -30,53 +30,75 @@
 </head>
 <body>
 
-  <!-- Nav and footer are repeated on every page (index.html and projects/*/index.html). Keep them in sync. -->
-  <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
-    <ul>
-      <li><a href="/#projects">projects</a></li>
-      <li><a href="/#experience">experience</a></li>
-      <li><a href="/#contact">contact</a></li>
-      <li><a href="/assets/resume.pdf">résumé</a></li>
-    </ul>
-  </nav>
-
-  <header class="wrap page-head">
-    <p class="cmd"><span class="ps">$</span> cat projects/vizably.md</p>
-    <h1>Vizably</h1>
-    <p class="meta">2026 · Codrlabs Solutions · Open source</p>
-    <p class="sub">Open-source accessibility scanning platform. I've contributed as a volunteer engineer at <a href="https://github.com/codrlabs">Codrlabs Solutions</a> since early 2026.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="https://vizably.vercel.app">Live <span class="sr-only">site for Vizably</span><span aria-hidden="true">↗</span></a>
-      <a class="btn" href="https://github.com/codrlabs/vizably">GitHub <span class="sr-only">repository for Vizably</span><span aria-hidden="true">↗</span></a>
-    </div>
+  <!-- Skip link, nav and footer are repeated on every page (index.html and projects/*/index.html). Keep them in sync. -->
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
+      <ul>
+        <li><a href="/#projects">projects</a></li>
+        <li><a href="/#experience">experience</a></li>
+        <li><a href="/#contact">contact</a></li>
+        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">résumé</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <div class="term pane">
-      <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/vizably</span></div>
-      <div class="shot" data-label="~/vizably"><img src="/assets/vizably.webp" alt="Screenshot of Vizably" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
-      <div class="body">
-        <dl>
-          <dt>Problem</dt>
-          <dd>Developers need a reliable way to find accessibility issues in websites without relying entirely on manual testing. Vizably automates the scanning and surfaces issues that can be investigated and fixed.</dd>
-          <dt>Decision</dt>
-          <dd>I designed the scanning flow with security boundaries around user-provided URLs, including SSRF protection, so the scanner can fetch external websites without exposing internal services or infrastructure.</dd>
-          <dt>My part</dt>
-          <dd>Backend architecture, automated scanning with Puppeteer and axe-core, SSRF protection, report storage, GitHub and Google integrations, authentication, and testing.</dd>
-          <dt>Result</dt>
-          <dd>My contributions helped ship the backend scanning infrastructure, security protections, integrations, authentication and automated tests, reviewed and merged through Vizably's open-source pull-request workflow.</dd>
-          <!-- Room for more: Architecture, Lessons, ... (same dt/dd pattern) -->
-        </dl>
-        <ul class="pills" aria-label="Tech">
-          <li>Node.js</li><li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
-        </ul>
+  <main id="main" class="wrap">
+    <div class="page-head">
+      <p class="cmd"><span class="ps">$</span> cat projects/vizably.md</p>
+      <div class="head-row"><h1>Vizably</h1><span class="badge">live</span></div>
+      <p class="meta">2026 · Codrlabs Solutions · Open source</p>
+      <p class="sub">Open-source accessibility scanning platform. I've contributed as a volunteer engineer at <a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a> since early 2026.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://vizably.vercel.app" target="_blank" rel="noopener">Live <span class="sr-only">site for Vizably</span><span aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://github.com/codrlabs/vizably" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Vizably</span><span aria-hidden="true">↗</span></a>
       </div>
     </div>
-    <a class="back" href="/#projects"><span aria-hidden="true">← </span>All projects</a>
+
+    <div class="case">
+      <article class="term pane">
+        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/vizably/README.md</span></div>
+        <div class="shot" data-label="~/vizably"><img src="/assets/vizably.webp" alt="Screenshot of Vizably" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
+        <div class="body">
+          <dl class="story">
+            <dt>Problem</dt>
+            <dd>Developers need a reliable way to find accessibility issues in websites without relying entirely on manual testing. Vizably automates the scanning and surfaces issues that can be investigated and fixed.</dd>
+            <dt>Decision</dt>
+            <dd>I designed the scanning flow with security boundaries around user-provided URLs, including SSRF protection, so the scanner can fetch external websites without exposing internal services or infrastructure.</dd>
+            <dt>My part</dt>
+            <dd>Backend architecture, automated scanning with Puppeteer and axe-core, SSRF protection, report storage, GitHub and Google integrations, authentication, and testing.</dd>
+            <dt>Result</dt>
+            <dd>My contributions helped ship the backend scanning infrastructure, security protections, integrations, authentication and automated tests, reviewed and merged through Vizably's open-source pull-request workflow.</dd>
+            <!-- Room for more: Architecture, Lessons, ... (same dt/dd pattern) -->
+          </dl>
+        </div>
+      </article>
+
+      <aside class="term overview" aria-label="Project overview">
+        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>overview</span></div>
+        <div class="body">
+          <dl class="kv stacked">
+            <dt>Role</dt><dd>Volunteer backend engineer</dd>
+            <dt>Organization</dt><dd><a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a></dd>
+            <dt>Timeline</dt><dd>Jan 2026 – present</dd>
+            <dt>Status</dt><dd>Live, open source</dd>
+            <dt>Stack</dt><dd><ul class="pills"><li>Node.js</li><li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li></ul></dd>
+          </dl>
+        </div>
+      </aside>
+    </div>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="/projects/voult/"><small>← previous</small>Voult.dev</a>
+      <a class="next" href="/projects/curate/"><small>next →</small>Curate</a>
+    </nav>
   </main>
 
-  <footer class="wrap">© 2026 Samuel Olabode · Edmonton, Alberta</footer>
+  <footer class="wrap">
+    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
+    <span>Hand-written HTML &amp; CSS · no frameworks, no trackers</span>
+  </footer>
 
 </body>
 </html>

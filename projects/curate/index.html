@@ -30,53 +30,75 @@
 </head>
 <body>
 
-  <!-- Nav and footer are repeated on every page (index.html and projects/*/index.html). Keep them in sync. -->
-  <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
-    <ul>
-      <li><a href="/#projects">projects</a></li>
-      <li><a href="/#experience">experience</a></li>
-      <li><a href="/#contact">contact</a></li>
-      <li><a href="/assets/resume.pdf">résumé</a></li>
-    </ul>
-  </nav>
-
-  <header class="wrap page-head">
-    <p class="cmd"><span class="ps">$</span> cat projects/curate.md</p>
-    <h1>Curate</h1>
-    <p class="meta">2026 · Browser extension · Open source</p>
-    <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="https://curate-eight-omega.vercel.app">Live <span class="sr-only">site for Curate</span><span aria-hidden="true">↗</span></a>
-      <a class="btn" href="https://github.com/DevOlabode/curate">GitHub <span class="sr-only">repository for Curate</span><span aria-hidden="true">↗</span></a>
-    </div>
+  <!-- Skip link, nav and footer are repeated on every page (index.html and projects/*/index.html). Keep them in sync. -->
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
+      <ul>
+        <li><a href="/#projects">projects</a></li>
+        <li><a href="/#experience">experience</a></li>
+        <li><a href="/#contact">contact</a></li>
+        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">résumé</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <div class="term pane">
-      <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/curate</span></div>
-      <div class="shot" data-label="~/curate"><img src="/assets/curate.webp" alt="Screenshot of Curate" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
-      <div class="body">
-        <dl>
-          <dt>Problem</dt>
-          <dd>Developers find useful resources constantly and lose track of them across tabs and bookmarks.</dd>
-          <dt>Decision</dt>
-          <dd>Open-sourced it a month after launch.</dd>
-          <dt>Built</dt>
-          <dd>The extension and web app, with authentication, bookmark management and collections.</dd>
-          <dt>Result</dt>
-          <dd>Launched August 2026 on the Chrome Web Store and Edge Add-ons. Made open source in September 2026 and received four outside contributions in the first week.</dd>
-          <!-- Room for more: Architecture, Lessons, ... (same dt/dd pattern) -->
-        </dl>
-        <ul class="pills" aria-label="Tech">
-          <li>JavaScript</li><li>Chrome &amp; Edge extension</li><li>EJS</li>
-        </ul>
+  <main id="main" class="wrap">
+    <div class="page-head">
+      <p class="cmd"><span class="ps">$</span> cat projects/curate.md</p>
+      <div class="head-row"><h1>Curate</h1><span class="badge">live</span></div>
+      <p class="meta">2026 · Browser extension · Open source</p>
+      <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://curate-eight-omega.vercel.app" target="_blank" rel="noopener">Live <span class="sr-only">site for Curate</span><span aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://github.com/DevOlabode/curate" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Curate</span><span aria-hidden="true">↗</span></a>
       </div>
     </div>
-    <a class="back" href="/#projects"><span aria-hidden="true">← </span>All projects</a>
+
+    <div class="case">
+      <article class="term pane">
+        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/curate/README.md</span></div>
+        <div class="shot" data-label="~/curate"><img src="/assets/curate.webp" alt="Screenshot of Curate" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
+        <div class="body">
+          <dl class="story">
+            <dt>Problem</dt>
+            <dd>Developers find useful resources constantly and lose track of them across tabs and bookmarks.</dd>
+            <dt>Decision</dt>
+            <dd>Open-sourced it a month after launch.</dd>
+            <dt>Built</dt>
+            <dd>The extension and web app, with authentication, bookmark management and collections.</dd>
+            <dt>Result</dt>
+            <dd>Launched August 2026 on the Chrome Web Store and Edge Add-ons. Made open source in September 2026 and received four outside contributions in the first week.</dd>
+            <!-- Room for more: Architecture, Lessons, ... (same dt/dd pattern) -->
+          </dl>
+        </div>
+      </article>
+
+      <aside class="term overview" aria-label="Project overview">
+        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>overview</span></div>
+        <div class="body">
+          <dl class="kv stacked">
+            <dt>Role</dt><dd>Creator</dd>
+            <dt>Timeline</dt><dd>Launched Aug 2026</dd>
+            <dt>Status</dt><dd>Live on Chrome Web Store and Edge Add-ons</dd>
+            <dt>Open source</dt><dd>Since Sep 2026, 4 outside contributions in week one</dd>
+            <dt>Stack</dt><dd><ul class="pills"><li>JavaScript</li><li>Chrome &amp; Edge extension</li><li>EJS</li></ul></dd>
+          </dl>
+        </div>
+      </aside>
+    </div>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="/projects/vizably/"><small>← previous</small>Vizably</a>
+      <a class="next" href="/projects/voult/"><small>next →</small>Voult.dev</a>
+    </nav>
   </main>
 
-  <footer class="wrap">© 2026 Samuel Olabode · Edmonton, Alberta</footer>
+  <footer class="wrap">
+    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
+    <span>Hand-written HTML &amp; CSS · no frameworks, no trackers</span>
+  </footer>
 
 </body>
 </html>

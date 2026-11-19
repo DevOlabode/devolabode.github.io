@@ -39,90 +39,110 @@
 </head>
 <body>
 
-  <!-- Nav and footer are repeated on every page (this file and projects/*/index.html). Keep them in sync. -->
-  <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
-    <ul>
-      <li><a href="/#projects">projects</a></li>
-      <li><a href="/#experience">experience</a></li>
-      <li><a href="/#contact">contact</a></li>
-      <li><a href="/assets/resume.pdf">résumé</a></li>
-    </ul>
-  </nav>
-
-  <header class="wrap hero">
-    <div class="term">
-      <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>samuel@edmonton: ~</span></div>
-      <div class="body">
-        <p class="cmd"><span class="ps">$</span> <span class="typed">whoami</span><span class="cursor" aria-hidden="true"></span></p>
-        <h1>Samuel Olabode</h1>
-        <p class="lead">High school student and full-stack/backend developer building software products and contributing to open-source projects.</p>
-        <p class="now"><b>Now:</b> Getting Voult ready for its private beta in December, and working on issues in Vizably.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://github.com/DevOlabode" rel="me">GitHub <span aria-hidden="true">↗</span></a>
-          <a class="btn" href="https://www.linkedin.com/in/samuelolabode/" rel="me">LinkedIn <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
-    <ul class="pills skills" aria-label="Skills">
-      <li>TypeScript</li><li>Node/Express</li><li>React</li><li>MongoDB</li><li>Linux</li><li>Git</li><li>Auth (JWT/OAuth)</li>
-    </ul>
+  <!-- Skip link, nav and footer are repeated on every page (this file and projects/*/index.html). Keep them in sync. -->
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="/"><span class="ps" aria-hidden="true">~/</span>samuel-olabode</a>
+      <ul>
+        <li><a href="/#projects">projects</a></li>
+        <li><a href="/#experience">experience</a></li>
+        <li><a href="/#contact">contact</a></li>
+        <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">résumé</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
+  <main id="main">
+    <section class="wrap hero">
+      <div class="term">
+        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>samuel@edmonton: ~ — zsh</span></div>
+        <div class="body">
+          <p class="cmd"><span class="ps">$</span> <span class="typed">whoami</span><span class="cursor" aria-hidden="true"></span></p>
+          <h1>Samuel Olabode</h1>
+          <p class="role">Full-stack &amp; backend developer</p>
+          <p class="lead">High school student building and shipping real software, from developer authentication infrastructure to open-source accessibility tooling.</p>
+          <p class="now"><b>Now:</b> Getting Voult ready for its private beta in December, and working on issues in Vizably.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/DevOlabode" target="_blank" rel="me noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="me noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="statusline" aria-hidden="true"><span class="mode">NORMAL</span><span class="file">~/portfolio/index.html</span><span>Edmonton, AB · utf-8</span></div>
+      </div>
+
+      <ul class="pills skills" aria-label="Skills">
+        <li>TypeScript</li><li>Node/Express</li><li>React</li><li>MongoDB</li><li>Linux</li><li>Git</li><li>Auth (JWT/OAuth)</li>
+      </ul>
+
+      <ul class="stats" aria-label="Highlights">
+        <li><b>3</b><span>npm packages published for Voult</span></li>
+        <li><b>3rd</b><span>place at NatHacks 2026, Problem Provider division</span></li>
+        <li><b>4</b><span>outside contributions to Curate in its first week</span></li>
+        <li><b>~1 yr</b><span>building Voult.dev from scratch</span></li>
+      </ul>
+    </section>
+
     <section id="projects" class="wrap" aria-labelledby="projects-h">
       <h2 id="projects-h"><span><span aria-hidden="true"><span class="ps">$</span> <span class="muted">ls</span> </span>projects</span></h2>
 
-      <article class="term pane">
+      <article class="term pane card">
         <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/voult</span></div>
-        <div class="shot" data-label="~/voult"><img src="/assets/voult.webp" alt="Screenshot of Voult.dev" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Voult.dev</h3>
-          <p class="meta">2025–present · Developer authentication SaaS</p>
-          <p class="sub">Authentication platform for developers, aiming for Clerk-level ease of use at Supabase-level affordability. Private beta in December 2026.</p>
-          <ul class="pills" aria-label="Tech">
-            <li>Node.js</li><li>Express</li><li>MongoDB</li><li>Redis</li><li>JWT</li><li>OAuth</li><li>WebAuthn</li>
-          </ul>
-          <div class="actions">
-            <a class="btn btn-primary" href="/projects/voult/">Case study<span class="sr-only"> for Voult.dev</span> <span aria-hidden="true">→</span></a>
-            <a class="btn" href="https://voult.dev">Live <span class="sr-only">site for Voult.dev</span><span aria-hidden="true">↗</span></a>
-            <a class="btn" href="https://github.com/voult-dev/voult">GitHub <span class="sr-only">repository for Voult.dev</span><span aria-hidden="true">↗</span></a>
+        <div class="split">
+          <div class="shot" data-label="~/voult"><img src="/assets/voult.webp" alt="Screenshot of Voult.dev" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <div class="body">
+            <div class="card-head"><h3><a href="/projects/voult/">Voult.dev</a></h3><span class="badge soon">beta · Dec 2026</span></div>
+            <p class="meta">2025–present · Developer authentication SaaS</p>
+            <p class="sub">Authentication platform for developers, aiming for Clerk-level ease of use at Supabase-level affordability. Ships with its own npm SDKs.</p>
+            <ul class="pills" aria-label="Tech">
+              <li>Node.js</li><li>Express</li><li>MongoDB</li><li>Redis</li><li>JWT</li><li>OAuth</li><li>WebAuthn</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="/projects/voult/">Case study<span class="sr-only"> for Voult.dev</span> <span aria-hidden="true">→</span></a>
+              <a class="btn" href="https://voult.dev" target="_blank" rel="noopener">Live <span class="sr-only">site for Voult.dev</span><span aria-hidden="true">↗</span></a>
+              <a class="btn" href="https://github.com/voult-dev/voult" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Voult.dev</span><span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </article>
 
-      <article class="term pane">
+      <article class="term pane card">
         <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/vizably</span></div>
-        <div class="shot" data-label="~/vizably"><img src="/assets/vizably.webp" alt="Screenshot of Vizably" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Vizably</h3>
-          <p class="meta">2026 · Codrlabs Solutions · Open source</p>
-          <p class="sub">Open-source accessibility scanning platform. I've contributed as a volunteer engineer at <a href="https://github.com/codrlabs">Codrlabs Solutions</a> since early 2026, mostly on the backend scanner and its SSRF protection.</p>
-          <ul class="pills" aria-label="Tech">
-            <li>Node.js</li><li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
-          </ul>
-          <div class="actions">
-            <a class="btn btn-primary" href="/projects/vizably/">Case study<span class="sr-only"> for Vizably</span> <span aria-hidden="true">→</span></a>
-            <a class="btn" href="https://vizably.vercel.app">Live <span class="sr-only">site for Vizably</span><span aria-hidden="true">↗</span></a>
-            <a class="btn" href="https://github.com/codrlabs/vizably">GitHub <span class="sr-only">repository for Vizably</span><span aria-hidden="true">↗</span></a>
+        <div class="split">
+          <div class="shot" data-label="~/vizably"><img src="/assets/vizably.webp" alt="Screenshot of Vizably" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <div class="body">
+            <div class="card-head"><h3><a href="/projects/vizably/">Vizably</a></h3><span class="badge">live</span></div>
+            <p class="meta">2026 · Codrlabs Solutions · Open source</p>
+            <p class="sub">Open-source accessibility scanner. As a volunteer engineer at <a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a>, I work on the backend scanner and its SSRF protection.</p>
+            <ul class="pills" aria-label="Tech">
+              <li>Node.js</li><li>Puppeteer</li><li>axe-core</li><li>SSRF protection</li><li>GitHub API</li><li>Google API</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="/projects/vizably/">Case study<span class="sr-only"> for Vizably</span> <span aria-hidden="true">→</span></a>
+              <a class="btn" href="https://vizably.vercel.app" target="_blank" rel="noopener">Live <span class="sr-only">site for Vizably</span><span aria-hidden="true">↗</span></a>
+              <a class="btn" href="https://github.com/codrlabs/vizably" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Vizably</span><span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </article>
 
-      <article class="term pane">
+      <article class="term pane card">
         <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/projects/curate</span></div>
-        <div class="shot" data-label="~/curate"><img src="/assets/curate.webp" alt="Screenshot of Curate" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Curate</h3>
-          <p class="meta">2026 · Browser extension · Open source</p>
-          <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles. Live on the Chrome Web Store and Edge Add-ons.</p>
-          <ul class="pills" aria-label="Tech">
-            <li>JavaScript</li><li>Chrome &amp; Edge extension</li><li>EJS</li>
-          </ul>
-          <div class="actions">
-            <a class="btn btn-primary" href="/projects/curate/">Case study<span class="sr-only"> for Curate</span> <span aria-hidden="true">→</span></a>
-            <a class="btn" href="https://curate-eight-omega.vercel.app">Live <span class="sr-only">site for Curate</span><span aria-hidden="true">↗</span></a>
-            <a class="btn" href="https://github.com/DevOlabode/curate">GitHub <span class="sr-only">repository for Curate</span><span aria-hidden="true">↗</span></a>
+        <div class="split">
+          <div class="shot" data-label="~/curate"><img src="/assets/curate.webp" alt="Screenshot of Curate" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <div class="body">
+            <div class="card-head"><h3><a href="/projects/curate/">Curate</a></h3><span class="badge">live</span></div>
+            <p class="meta">2026 · Browser extension · Open source</p>
+            <p class="sub">Browser extension for developers to save and discover docs, tutorials, tools and articles. Live on the Chrome Web Store and Edge Add-ons.</p>
+            <ul class="pills" aria-label="Tech">
+              <li>JavaScript</li><li>Chrome &amp; Edge extension</li><li>EJS</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="/projects/curate/">Case study<span class="sr-only"> for Curate</span> <span aria-hidden="true">→</span></a>
+              <a class="btn" href="https://curate-eight-omega.vercel.app" target="_blank" rel="noopener">Live <span class="sr-only">site for Curate</span><span aria-hidden="true">↗</span></a>
+              <a class="btn" href="https://github.com/DevOlabode/curate" target="_blank" rel="noopener">GitHub <span class="sr-only">repository for Curate</span><span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </article>
@@ -134,38 +154,62 @@
         <!-- ADD NEW EXPERIENCE HERE: copy one item, paste it at the top, edit it -->
         <li>
           <time datetime="2026-11">Nov 2026</time>
-          <div>
-            <h3>NatHacks 2026 · 3rd place, Problem Provider division</h3>
-            <p>With a 4-person team, tackled ValueMed's clinic equipment-planning problem. We built <a href="https://github.com/achubakha/clinic.exe">Clinic.exe</a>, an AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request. Python, Flask and an LLM API.</p>
-          </div>
+          <h3>NatHacks 2026 · 3rd place, Problem Provider division</h3>
+          <p>With a 4-person team, tackled ValueMed's clinic equipment-planning problem. We built <a href="https://github.com/achubakha/clinic.exe" target="_blank" rel="noopener">Clinic.exe</a>, an AI assistant that turns "I'm opening a clinic" into a priced equipment list, a 3D room layout and a quote request.</p>
+          <ul class="pills" aria-label="Tech"><li>Python</li><li>Flask</li><li>LLM API</li><li>WebGL</li></ul>
         </li>
         <li>
-          <time datetime="2026-01">Jan 2026 – now</time>
-          <div>
-            <h3>Web developer (volunteer), <a href="https://github.com/codrlabs">Codrlabs Solutions</a></h3>
-            <p>Backend work on <a href="/projects/vizably/">Vizably</a>: page scanning with Puppeteer and axe-core, SSRF protection, report storage and GitHub/Google integrations. Currently migrating its documentation into the shared <a href="https://github.com/codrlabs/open">codrlabs/open</a> repo.</p>
-          </div>
+          <time datetime="2026-01">Jan 2026 – present</time>
+          <h3>Web developer (volunteer) · <a href="https://github.com/codrlabs" target="_blank" rel="noopener">Codrlabs Solutions</a></h3>
+          <p>Backend work on <a href="/projects/vizably/">Vizably</a>: page scanning with Puppeteer and axe-core, SSRF protection, report storage and GitHub/Google integrations. Currently migrating its documentation into the shared <a href="https://github.com/codrlabs/open" target="_blank" rel="noopener">codrlabs/open</a> repo.</p>
+          <ul class="pills" aria-label="Tech"><li>Node.js</li><li>Puppeteer</li><li>axe-core</li></ul>
         </li>
       </ul>
     </section>
 
-    <section id="about" class="wrap about" aria-labelledby="about-h">
+    <section id="about" class="wrap" aria-labelledby="about-h">
       <h2 id="about-h"><span><span aria-hidden="true"><span class="ps">$</span> <span class="muted">cat</span> </span>about<span aria-hidden="true">.md</span></span></h2>
-      <p>I like closing the gap between an idea and a working product, especially developer tools and web applications that are easier to build, use, and maintain. I'm still in high school, but I build and ship software outside of school instead of only following tutorials or making demo projects. My work covers real users, APIs, authentication, deployment, open-source collaboration, and developer experience.</p>
+      <div class="about-grid">
+        <div class="prose">
+          <p>I like closing the gap between an idea and a working product, especially developer tools and web applications that are easier to build, use, and maintain.</p>
+          <p>I'm still in high school, but I build and ship software outside of school instead of only following tutorials or making demo projects. My work covers real users, APIs, authentication, deployment, open-source collaboration, and developer experience.</p>
+        </div>
+        <dl class="kv facts">
+          <dt>location</dt><dd>Edmonton, AB</dd>
+          <dt>school</dt><dd>High school, class of 2027</dd>
+          <dt>focus</dt><dd>Auth, backends, dev tools</dd>
+          <dt>interest</dt><dd>Software for research problems</dd>
+        </dl>
+      </div>
     </section>
 
     <section id="contact" class="wrap" aria-labelledby="contact-h">
       <h2 id="contact-h"><span><span aria-hidden="true"><span class="ps">$</span> </span>contact</span></h2>
-      <dl class="contact">
-        <dt>email</dt><dd><a href="mailto:solabode223@gmail.com">solabode223@gmail.com</a></dd>
-        <dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/samuelolabode/" rel="me">linkedin.com/in/samuelolabode</a></dd>
-        <dt>github</dt><dd><a href="https://github.com/DevOlabode" rel="me">github.com/DevOlabode</a></dd>
-        <dt>résumé</dt><dd><a href="/assets/resume.pdf">resume.pdf</a> <span class="muted">(PDF, 50 KB)</span></dd>
-      </dl>
+      <div class="term cta">
+        <div class="bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>~/contact</span></div>
+        <div class="body">
+          <div>
+            <h3>Let's build something.</h3>
+            <p>Have a role, research project or open-source idea in mind? Email is the fastest way to reach me.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="mailto:solabode223@gmail.com">Email me</a>
+              <a class="btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé (PDF, 50 KB) <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <dl class="kv">
+            <dt>email</dt><dd><a href="mailto:solabode223@gmail.com">solabode223@gmail.com</a></dd>
+            <dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="me noopener">in/samuelolabode</a></dd>
+            <dt>github</dt><dd><a href="https://github.com/DevOlabode" target="_blank" rel="me noopener">DevOlabode</a></dd>
+          </dl>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap">© 2026 Samuel Olabode · Edmonton, Alberta</footer>
+  <footer class="wrap">
+    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
+    <span>Hand-written HTML &amp; CSS · no frameworks, no trackers</span>
+  </footer>
 
 </body>
 </html>
