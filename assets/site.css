@@ -19,6 +19,8 @@
   --kw: #2a52c9;
   --shadow: 0 1px 2px rgb(24 24 26 / .05), 0 14px 36px -22px rgb(24 24 26 / .28);
   --shot-shadow: 0 -4px 28px -8px rgb(0 0 0 / .22);
+  --shadow-lg: 0 1px 2px rgb(24 24 26 / .05), 0 28px 56px -26px rgb(24 24 26 / .38);
+  --ease: cubic-bezier(.2, .7, .2, 1);
   --tint-voult: #1d1d20;
   --tint-vizably: #dfe7fb;
   --tint-curate: #f0e4d5;
@@ -29,8 +31,9 @@
   --gutter: 20px;
   color-scheme: light dark;
 }
+/* Dark tokens appear twice: for the system setting, and for the theme toggle. Keep the two copies identical. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0f0f10;
     --surface: #161618;
     --sunk: #1c1c1f;
@@ -48,10 +51,34 @@
     --tint-voult: #222226;
     --tint-vizably: #18213a;
     --tint-curate: #2a2219;
+    --shadow-lg: 0 1px 2px rgb(0 0 0 / .4), 0 30px 60px -28px rgb(0 0 0 / .9);
   }
 }
+:root[data-theme="dark"] {
+  --bg: #0f0f10;
+  --surface: #161618;
+  --sunk: #1c1c1f;
+  --line: #29292d;
+  --line-2: #3b3b40;
+  --text: #f2f2f0;
+  --text-2: #c2c2c5;
+  --muted: #94949a;
+  --accent: #6fcf9a;
+  --accent-soft: #15291e;
+  --amber: #f1c21b;
+  --kw: #a6c8ff;
+  --shadow: 0 1px 2px rgb(0 0 0 / .4), 0 18px 40px -24px rgb(0 0 0 / .8);
+  --shot-shadow: 0 -4px 32px -8px rgb(0 0 0 / .7);
+  --tint-voult: #222226;
+  --tint-vizably: #18213a;
+  --tint-curate: #2a2219;
+  --shadow-lg: 0 1px 2px rgb(0 0 0 / .4), 0 30px 60px -28px rgb(0 0 0 / .9);
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
   margin: 0;
@@ -105,7 +132,23 @@ a:hover { text-decoration-color: currentColor; }
 .nav ul { display: flex; align-items: center; gap: 2px; margin: 0; padding: 0; list-style: none; font-size: .9375rem; }
 .nav ul a { display: block; padding: 6px 12px; border-radius: 999px; color: var(--text-2); text-decoration: none; }
 .nav ul a:hover { color: var(--text); background: var(--sunk); }
+.nav ul a.is-active { color: var(--text); background: var(--sunk); }
 .nav .opt { display: none; }
+.theme-toggle {
+  display: grid; place-items: center; width: 38px; height: 38px; margin-left: 6px; padding: 0;
+  color: var(--text-2); background: none; border: 1px solid var(--line); border-radius: 999px; cursor: pointer;
+  transition: color .15s, border-color .15s, background-color .15s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--line-2); background: var(--sunk); }
+.theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; animation: spin-in .5s var(--ease); }
+.theme-toggle .sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+}
+@keyframes spin-in { from { opacity: 0; transform: rotate(-90deg) scale(.6); } }
 .nav .nav-cta { margin-left: 8px; padding-inline: 16px; background: var(--text); color: var(--bg); font-weight: 600; }
 .nav .nav-cta:hover { background: var(--text-2); color: var(--bg); }
 
@@ -122,6 +165,10 @@ a:hover { text-decoration-color: currentColor; }
 .btn-primary { background: var(--text); border-color: var(--text); color: var(--bg); }
 .btn-primary:hover { background: var(--text-2); border-color: var(--text-2); }
 .btn .arr { font-weight: 400; opacity: .7; }
+.btn:active { transform: translateY(1px); }
+a > span[aria-hidden="true"] { display: inline-block; transition: transform .25s var(--ease); }
+a:hover > span[aria-hidden="true"] { transform: translateX(3px); }
+.back:hover > span[aria-hidden="true"] { transform: translateX(-3px); }
 
 .pill {
   display: inline-flex; align-items: center; gap: 9px;
@@ -129,8 +176,13 @@ a:hover { text-decoration-color: currentColor; }
   font-size: .8125rem; line-height: 1.4; color: var(--text-2);
   background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
 }
-.pill::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.pill.beta::before { background: var(--amber); box-shadow: 0 0 0 3px color-mix(in srgb, var(--amber) 22%, transparent); }
+.pill { --dot: var(--accent); }
+.pill.beta { --dot: var(--amber); }
+.pill::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--dot); animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--dot) 55%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--dot) 0%, transparent); }
+}
 
 /* Bulleted lists with a short accent dash */
 .points { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
@@ -170,7 +222,9 @@ a:hover { text-decoration-color: currentColor; }
 .project {
   display: flex; flex-direction: column; padding: 10px;
   background: var(--surface); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
+.project:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .shot {
   display: block; overflow: hidden; aspect-ratio: 16 / 10;
   padding: 24px 24px 0; border-radius: 14px;
@@ -179,7 +233,7 @@ a:hover { text-decoration-color: currentColor; }
 .shot img {
   width: 100%; height: 100%; object-fit: cover; object-position: top left;
   border-radius: 8px 8px 0 0; box-shadow: var(--shot-shadow);
-  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+  transition: transform .5s var(--ease);
 }
 .project:hover .shot img { transform: translateY(-6px); }
 .tint-voult { --tint: var(--tint-voult); }
@@ -333,6 +387,41 @@ a:hover { text-decoration-color: currentColor; }
 .lost h1 { margin-top: 16px; font-size: clamp(2.5rem, 1.8rem + 3vw, 4rem); }
 .lost p:not(.eyebrow) { max-width: 34em; margin-top: 16px; font-size: 1.125rem; }
 
+/* ---------- Motion ---------- */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+
+/* Entrance on page load: the hero and case-study header, staggered */
+:is(.hero > div, .cs-head, .lost) > *, .hero .metrics, .back, .facts { animation: rise .8s var(--ease) backwards; }
+:is(.hero > div, .cs-head, .lost) > :nth-child(2) { animation-delay: 70ms; }
+:is(.hero > div, .cs-head, .lost) > :nth-child(3) { animation-delay: 140ms; }
+:is(.hero > div, .cs-head, .lost) > :nth-child(4) { animation-delay: 210ms; }
+:is(.hero > div, .cs-head, .lost) > :nth-child(5) { animation-delay: 280ms; }
+.hero .metrics, .facts { animation-delay: 320ms; }
+
+/* Scroll reveals: site.js adds .reveal to below-the-fold elements, then .in when they arrive */
+.reveal:not(.in) { opacity: 0; }
+.reveal.in { animation: rise .7s var(--ease) backwards; }
+
+/* Page-to-page transitions: each project screenshot morphs into its case-study hero */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+::view-transition-group(*) { animation-duration: .5s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+/* Fade the old page out before the new one comes in, so their text never overlaps */
+::view-transition-old(root),
+::view-transition-old(*):only-child { animation: fade-out .2s ease-in both; } /* screenshots with no partner on the new page */
+::view-transition-new(root) { animation: fade-in .3s .12s ease-out both; }
+@keyframes fade-out { to { opacity: 0; } }
+@keyframes fade-in { from { opacity: 0; } }
+.shot.tint-voult { view-transition-name: shot-voult; }
+.shot.tint-vizably { view-transition-name: shot-vizably; }
+.shot.tint-curate { view-transition-name: shot-curate; }
+
+/* Theme switch: site.js animates a circular clip on the new snapshot */
+.theme-switching .shot { view-transition-name: none; }
+.theme-switching::view-transition-old(root),
+.theme-switching::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
 /* ---------- Breakpoints ---------- */
 @media (min-width: 640px) {
   :root { --gutter: 32px; }
@@ -372,5 +461,5 @@ a:hover { text-decoration-color: currentColor; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
