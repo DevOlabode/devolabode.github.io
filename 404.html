@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · Samuel Olabode</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#0e0e0e">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -16,31 +17,29 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="/"><img src="/favicon.svg" width="22" height="22" alt="">Samuel Olabode</a>
+      <a class="brand" href="/"><img src="/favicon.svg" width="28" height="28" alt="">Samuel Olabode</a>
       <ul>
-        <li class="opt"><a href="/#projects">Projects</a></li>
+        <li class="opt"><a href="/#projects">Work</a></li>
         <li class="opt"><a href="/#experience">Experience</a></li>
-        <li class="opt"><a href="/#skills">Skills</a></li>
         <li class="opt"><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li class="opt"><a href="/#contact">Contact</a></li>
         <li><a class="nav-cta" href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main" class="wrap lost">
-    <h1 class="sr-only">Page not found (404)</h1>
-<pre aria-hidden="true"><span class="ps">~ $</span> cd <span id="path">this-page</span>
-<span class="err">cd: no such file or directory</span><span class="cursor"></span></pre>
-    <p class="lead">This page doesn't exist, or it moved when the site was rebuilt.</p>
+    <p class="eyebrow">Error 404</p>
+    <h1>This page doesn't exist</h1>
+    <p>It may have moved when the site was rebuilt. Everything is still reachable from the home page.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="/">Go home</a>
-      <a class="btn" href="/#projects">See projects</a>
+      <a class="btn btn-primary" href="/">Go to the home page</a>
+      <a class="btn" href="/#projects">See my work</a>
     </div>
   </main>
 
   <footer class="wrap footer">
-    <span>© 2026 Samuel Olabode</span>
+    <span>© 2026 Samuel Olabode · Edmonton, Alberta</span>
     <ul>
       <li><a href="https://github.com/DevOlabode" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/samuelolabode/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -49,10 +48,5 @@
     </ul>
   </footer>
 
-  <script>
-    var p = location.pathname;
-    try { p = decodeURIComponent(p); } catch (e) {}
-    document.getElementById('path').textContent = p;
-  </script>
 </body>
 </html>
